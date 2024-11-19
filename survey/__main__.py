@@ -15,15 +15,35 @@ print("Hello world!")
 
 def analyze_data():
    
+   data_file = "./data/2024-10-08_Svar-til-sporreundersokelse-om-universell-utforming-av-cookies.xlsx"
+   if not os.path.exists(data_file):
+      print("The file could not be found.")
+      return
+   
+   df = pd.read_excel("./data/2024-10-08_Svar-til-sporreundersokelse-om-universell-utforming-av-cookies.xlsx")
+   
    """
    *** Analysis ***
    """
+   
+   is_sweden_only = True
    
    """
    1. Country: land
    
    Type: Pie chart
    """
+   
+   if is_sweden_only:
+      country = df[df["land"] != "Ukjent" ]
+   else:
+      country = df["land"]
+   
+   country = country["land"]
+   print(country)
+   
+   df.groupby("land")["land"].count().plot(kind="pie")
+   plt.show()
 
    """
    2. Age: alder
