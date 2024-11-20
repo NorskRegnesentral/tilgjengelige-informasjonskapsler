@@ -3,6 +3,7 @@
 *.pyc
 *.prefs
 
+*.xlsx
+
 wech/
-data/
 results/
