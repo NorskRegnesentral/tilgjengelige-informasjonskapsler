@@ -11,28 +11,37 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def basic_chart(data,group_by,kind,title,save_file="",is_values_as_labels=False):
+def prepare_data(data,group_by):
+   
+   if not group_by:
+      print("No paramter for grouping the data has been chosen")
+      return
+         
+   curr_data = data.groupby(group_by)[group_by].count()
+   
+   return curr_data, "{}".format(data)
+
+def basic_chart(data,kind,title,save_file=""):
+   """
+   Returns the results as string.
+   """
    
    fig, ax = plt.subplots()   
-   
-   if group_by:
-      
-      #autopct='%1.f%%'
-      labels = None
-      if is_values_as_labels:
-         labels = data.groupby(group_by)[group_by].count()
          
-      curr_data = data.groupby(group_by)[group_by].count()
+   if kind == "pie":
+      pupsi ='%1.f%%'   
+      data.plot(kind=kind, autopct=pupsi, ylabel="", cmap="Pastel1")
+   else: 
+      total = data.sum()
+      percentage = []
+      for i in data:
+         pct = (i / total) * 100
+         percentage.append(round(pct, 2))
+      ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
       
-      #res_str += "\n\n{}".format(curr_data)
-      
-      if kind == "pie":
-         pupsi ='%1.f%%'   
-         curr_data.plot(kind=kind, autopct=pupsi, ylabel="", cmap="Pastel1")
-      else: 
-         curr_data.plot(kind=kind, ylabel="", cmap="Pastel1")
-         
-      
+      for container in ax.containers:
+         ax.bar_label(container)
+           
    if title:
       ax.set_title(title)
       
@@ -41,7 +50,7 @@ def basic_chart(data,group_by,kind,title,save_file="",is_values_as_labels=False)
       plt.close(fig)
       print("Image save under {}".format(save_file))
    
-   return "{}".format(curr_data)
+   return
       
 def analyze_data():
    
@@ -98,7 +107,7 @@ def analyze_data():
          },
       
       # 4. internet habits as pie chart separated by impairment (with, without, combined)
-      3: {
+      4: {
             "var": ["internettvaner"],
             "sets":  ["no","se","all"],
             "title": "How often do you use the Internet?",
@@ -107,34 +116,126 @@ def analyze_data():
       
       # 5. default choices as bar chart separated by impairment (with, without, combined)
       5: {
-            "var": ["default-valg"],
-            "sets":  ["no","se","all"],
-            "title": "What do you usually do with the cookie settings?",
-            "kind":  "bar"
+            "var":     ["default-valg"],
+            "sets":    ["no","se","all"],
+            "subsets": {
+               1: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "equal to",
+                  "value": "Ja",
+                  "file-app": "with-impairment",
+                  "title-app": "with impairment"
+                  },
+               2: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "not equal to",
+                  "value": "Ja",
+                  "file-app": "without-impairment",
+                  "title-app": "without impairment"
+                  },
+               3: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "",
+                  "value": "",
+                  "file-app": "all-abilities",
+                  "title-app": "all abilities"
+                  },
+            },
+            "title":   "What do you usually do with the cookie settings?",
+            "kind":    "barh"
          },
       
       # 6. general difficulty as bar chart separated by impairment (with, without, combined)
       6: {
-            "var": ["vanskelighetsgrad-generell"],
-            "sets":  ["no","se","all"],
-            "title": "What do you usually do with the cookie settings?",
-            "kind":  "bar"
+            "var":     ["vanskelighetsgrad-generell"],
+            "sets":    ["no","se","all"],
+            "subsets": {
+               1: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "equal to",
+                  "value": "Ja",
+                  "file-app": "with-impairment",
+                  "title-app": "with impairment"
+                  },
+               2: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "not equal to",
+                  "value": "Ja",
+                  "file-app": "without-impairment",
+                  "title-app": "without impairment"
+                  },
+               3: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "",
+                  "value": "",
+                  "file-app": "all-abilities",
+                  "title-app": "all abilities"
+                  },
+            },
+            "title":   "What do you think about the cookies in general?",
+            "kind":    "bar"
          },
       
       # 7. text difficulty a bar chart separated by impairment (with, without, combined)
       7: {
             "var": ["vanskelighetsgrad-tekst"],
             "sets":  ["no","se","all"],
-            "title": "What do you usually do with the cookie settings?",
+            "subsets": {
+               1: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "equal to",
+                  "value": "Ja",
+                  "file-app": "with-impairment",
+                  "title-app": "with impairment"
+                  },
+               2: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "not equal to",
+                  "value": "Ja",
+                  "file-app": "without-impairment",
+                  "title-app": "without impairment"
+                  },
+               3: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "",
+                  "value": "",
+                  "file-app": "all-abilities",
+                  "title-app": "all abilities"
+                  },
+            },
+            "title": "What do you think about the text in cookie settings?",
             "kind":  "bar"
          },
       
       # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
       8: {
-            "var": ["vanskelighetsgrad-valg"],
-            "sets":  ["no","se","all"],
-            "title": "What do you usually do with the cookie settings?",
-            "kind":  "bar"
+            "var":     ["vanskelighetsgrad-valg"],
+            "sets":    ["no","se","all"],
+            "subsets": {
+               1: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "equal to",
+                  "value": "Ja",
+                  "file-app": "with-impairment",
+                  "title-app": "with impairment"
+                  },
+               2: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "not equal to",
+                  "value": "Ja",
+                  "file-app": "without-impairment",
+                  "title-app": "without impairment"
+                  },
+               3: {
+                  "var": "funksjonsnedsettelse",
+                  "operator": "",
+                  "value": "",
+                  "file-app": "all-abilities",
+                  "title-app": "all abilities"
+                  },
+            },
+            "title":   "What do you think about finding choices in cookie settings?",
+            "kind":    "bar"
          }
       }
    
@@ -150,15 +251,14 @@ def analyze_data():
       "file-app": {
          "no": "norway-only",
          "se": "sweden-only",
-         "all": "all"
+         "all": "all-countries"
          },
       "title-app": {
-         "no": "(Norway only)",
-         "se": "(Sweden only)",
-         "all": "(All combined)"
+         "no": "Norway only",
+         "se": "Sweden only",
+         "all": "All countries combined"
          }
       }
-   
    
    """
    4. Conducting the analysis
@@ -197,22 +297,66 @@ def analyze_data():
             continue
          curr_data_set = lookup["data_set"][set]
          
-         if set in lookup["file-app"]:
-            appendix = lookup["file-app"][set]
-         else:
+         if not set in lookup["file-app"] and not lookup["file-app"][set]:
             appendix = set
+         else:
+            appendix = lookup["file-app"][set]
          
          curr_title    = title
          if set in lookup["title-app"]:
-            curr_title += " {}".format(lookup["title-app"][set])
+            curr_title += "\n{}".format(lookup["title-app"][set])
          else:
-            curr_title += " {}".format(set)
-         res_str       += "\n\n{}\n".format(lookup["title-app"][set])
+            curr_title += "\n{}".format(set)
+         res_str       += "\n\n### {}\n".format(curr_title) # This needs to be changed maybe
          
          ext       = "png"
-         save_file = os.path.join("results","{:02d}-{}-{}.{}".format(key,var,appendix,ext))
-         curr_res  = basic_chart(curr_data_set,var,kind,curr_title,save_file) # Here, the actually analysis is triggered
-         res_str  += "```\n{}\n```".format(curr_res)
+         curr_res  = "" 
+         if  not "subsets" in values or not values["subsets"]:   
+            save_file = os.path.join("results","{:02d}-{}-{}.{}".format(key,var,appendix,ext))
+            grouped_data, curr_res = prepare_data(curr_data_set,var)
+            curr_res  = basic_chart(grouped_data,kind,curr_title,save_file) # Here, the actually analysis is triggered
+            res_str  += "```\n{}\n```".format(curr_res)
+         else:
+            
+            for subset_key,subset_values in values["subsets"].items(): # values["subsets"] is supposed a dict
+               #print(subset_values)
+               if not "var" in subset_values:
+                  print("No variable has been chosen for the subset.")
+                  continue
+               var_subset = subset_values["var"]
+               
+               subset_appendix = appendix
+               if not "file-app" in subset_values or subset_values["file-app"]:
+                  subset_appendix += "-{}".format(subset_values["file-app"])
+               else:
+                  subset_appendix += "-subset-{}".format(subset_key)
+               
+               curr_subset_title = curr_title
+               if not "title-app" in subset_values or subset_values["title-app"]:
+                  curr_subset_title += ", subset {}".format(subset_values["title-app"])
+               else:
+                  curr_subset_title += ", {}".format(subset_values["title-app"])
+               res_str       += "\n### Subset {}\n".format(curr_subset_title) # This needs to be changed maybe
+               
+               curr_data_subset = curr_data_set
+               if not "operator" in subset_values or not "value" in subset_values or not subset_values["operator"] or not subset_values["value"]:
+                  print("No operator and/or value has been chosen for the subset. Using the whole data set.")
+                  # Do exactly as above
+                  pass
+               else: 
+                  if subset_values["operator"] == "equal to":
+                     curr_data_subset = curr_data_set[curr_data_set[var_subset]==subset_values["value"]]
+                     #print(var_subset,curr_data_subset)
+                  elif subset_values["operator"] == "not equal to":
+                     curr_data_subset = curr_data_set[curr_data_set[var_subset]!=subset_values["value"]]
+                  else:
+                     print("Unknown operator chosen for the subset: {}".format(subset_values["operator"]))   
+                     continue
+                  
+               save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
+               grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+               basic_chart(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
+               res_str  += "```\n{}\n```".format(curr_res)
    
    """
    5. Writing the results to a text file.
