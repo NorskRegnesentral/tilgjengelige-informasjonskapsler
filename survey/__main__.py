@@ -11,7 +11,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from visualization import basic_chart
+from visualization import plot_data
 
 def prepare_data(data,group_by):
    
@@ -285,7 +285,7 @@ def process_data():
          if  not "subsets" in values or not values["subsets"]:   
             save_file = os.path.join("results","{:02d}-{}-{}.{}".format(key,var,appendix,ext))
             grouped_data, curr_res = prepare_data(curr_data_set,var)
-            curr_res  = basic_chart(grouped_data,kind,curr_title,save_file) # Here, the actually analysis is triggered
+            curr_res  = plot_data(grouped_data,kind,curr_title,save_file) # Here, the actually analysis is triggered
             res_str  += "```\n{}\n```".format(curr_res)
          else:
             
@@ -341,7 +341,7 @@ def process_data():
                      
                save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                #print(grouped_data_subset)
-               basic_chart(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
+               plot_data(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
                res_str  += "```\n{}\n```".format(curr_res)
    
    """

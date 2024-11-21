@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def basic_chart(data,kind,title,save_file=""):
+def plot_data(data,kind,title,save_file=""):
    """
    Returns the results as string.
    """
