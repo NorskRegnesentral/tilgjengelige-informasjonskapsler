@@ -32,15 +32,18 @@ def basic_chart(data,kind,title,save_file=""):
       pupsi ='%1.f%%'   
       data.plot(kind=kind, autopct=pupsi, ylabel="", cmap="Pastel1")
    else: 
-      total = data.sum()
-      percentage = []
-      for i in data:
-         pct = (i / total) * 100
-         percentage.append(round(pct, 2))
-      ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
+      #total = data.sum()
+      #percentage = []
+      #for i in data:
+      #   pass
+         #pct = (i / total) * 100
+         #percentage.append(round(pct, 2))
+      #ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
+      #print(data)
+      data.plot(kind=kind)
       
-      for container in ax.containers:
-         ax.bar_label(container)
+      #for container in ax.containers:
+      #   ax.bar_label(container)
            
    if title:
       ax.set_title(title)
@@ -48,7 +51,9 @@ def basic_chart(data,kind,title,save_file=""):
    if save_file:
       fig.savefig(save_file)
       plt.close(fig)
-      print("Image save under {}".format(save_file))
+      print("Image saved under {}".format(save_file))
+   
+   plt.close()
    
    return
       
@@ -119,30 +124,33 @@ def analyze_data():
             "var":     ["default-valg"],
             "sets":    ["no","se","all"],
             "subsets": {
+               4: {
+                  "var": "funksjonsnedsettelse",
+                  "operators": [("equal to","Ja"), ("not equal to","Ja")],
+                  "file-app": "pupsi",
+                  "title-app": "pupsi"
+                  },
                1: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "equal to",
-                  "value": "Ja",
+                  "operators": [("equal to","Ja")],
                   "file-app": "with-impairment",
                   "title-app": "with impairment"
                   },
                2: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "not equal to",
-                  "value": "Ja",
+                  "operators": [("not equal to","Ja")],
                   "file-app": "without-impairment",
                   "title-app": "without impairment"
                   },
                3: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "",
-                  "value": "",
+                  "operators": [],
                   "file-app": "all-abilities",
                   "title-app": "all abilities"
-                  },
+                  }
             },
             "title":   "What do you usually do with the cookie settings?",
-            "kind":    "barh"
+            "kind":    "bar"
          },
       
       # 6. general difficulty as bar chart separated by impairment (with, without, combined)
@@ -152,22 +160,19 @@ def analyze_data():
             "subsets": {
                1: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "equal to",
-                  "value": "Ja",
+                  "operators": [("equal to","Ja")],
                   "file-app": "with-impairment",
                   "title-app": "with impairment"
                   },
                2: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "not equal to",
-                  "value": "Ja",
+                  "operators": [("not equal to","Ja")],
                   "file-app": "without-impairment",
                   "title-app": "without impairment"
                   },
                3: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "",
-                  "value": "",
+                  "operators": [],
                   "file-app": "all-abilities",
                   "title-app": "all abilities"
                   },
@@ -183,22 +188,19 @@ def analyze_data():
             "subsets": {
                1: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "equal to",
-                  "value": "Ja",
+                  "operators": [("equal to","Ja")],
                   "file-app": "with-impairment",
                   "title-app": "with impairment"
                   },
                2: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "not equal to",
-                  "value": "Ja",
+                  "operators": [("not equal to","Ja")],
                   "file-app": "without-impairment",
                   "title-app": "without impairment"
                   },
                3: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "",
-                  "value": "",
+                  "operators": [],
                   "file-app": "all-abilities",
                   "title-app": "all abilities"
                   },
@@ -214,29 +216,32 @@ def analyze_data():
             "subsets": {
                1: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "equal to",
-                  "value": "Ja",
+                  "operators": [("equal to","Ja")],
                   "file-app": "with-impairment",
                   "title-app": "with impairment"
                   },
                2: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "not equal to",
-                  "value": "Ja",
+                  "operators": [("not equal to","Ja")],
                   "file-app": "without-impairment",
                   "title-app": "without impairment"
                   },
                3: {
                   "var": "funksjonsnedsettelse",
-                  "operator": "",
-                  "value": "",
+                  "operators": [],
                   "file-app": "all-abilities",
                   "title-app": "all abilities"
                   },
+               4: {
+                  "var": "funksjonsnedsettelse",
+                  "operators": [("equal to","Ja"), ("not equal to","Ja")],
+                  "file-app": "pupsi",
+                  "title-app": "pupsi"
+                  }
             },
             "title":   "What do you think about finding choices in cookie settings?",
             "kind":    "bar"
-         }
+         },
       }
    
    """
@@ -338,23 +343,38 @@ def analyze_data():
                   curr_subset_title += ", {}".format(subset_values["title-app"])
                res_str       += "\n### Subset {}\n".format(curr_subset_title) # This needs to be changed maybe
                
-               curr_data_subset = curr_data_set
-               if not "operator" in subset_values or not "value" in subset_values or not subset_values["operator"] or not subset_values["value"]:
+               curr_data_subset    = curr_data_set
+               grouped_data_subset = []
+               if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
                   # Do exactly as above
-                  pass
-               else: 
-                  if subset_values["operator"] == "equal to":
-                     curr_data_subset = curr_data_set[curr_data_set[var_subset]==subset_values["value"]]
-                     #print(var_subset,curr_data_subset)
-                  elif subset_values["operator"] == "not equal to":
-                     curr_data_subset = curr_data_set[curr_data_set[var_subset]!=subset_values["value"]]
-                  else:
-                     print("Unknown operator chosen for the subset: {}".format(subset_values["operator"]))   
-                     continue
+                  #pass
+                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+               
+               else:
+                  multiple_groups = []
+                  for operator in subset_values["operators"]:
+                     #print(operator)
+                     if operator[0] == "equal to":
+                        curr_data_subset = curr_data_set[curr_data_set[var_subset]==operator[1]]
+                        #print(var_subset,curr_data_subset)
+                     elif operator[0] == "not equal to":
+                        curr_data_subset = curr_data_set[curr_data_set[var_subset]!=operator[1]]
+                     else:
+                        print("Unknown operator chosen for the subset: {}".format(operator[0])) 
+                        continue
+                     curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+                     multiple_groups.append(curr_grouped_data_subset)
                   
+                  grouped_data_subset = pd.concat(multiple_groups,axis=1)
+                  
+               if "pupsi" in curr_subset_title:
+                  grouped_data_subset.plot(kind="bar")
+                  plt.show()
+                  print(grouped_data_subset)
+                     
                save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
-               grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+               #print(grouped_data_subset)
                basic_chart(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
                res_str  += "```\n{}\n```".format(curr_res)
    
