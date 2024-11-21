@@ -11,6 +11,8 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from visualization import basic_chart
+
 def prepare_data(data,group_by):
    
    if not group_by:
@@ -20,44 +22,8 @@ def prepare_data(data,group_by):
    curr_data = data.groupby(group_by)[group_by].count()
    
    return curr_data, "{}".format(data)
-
-def basic_chart(data,kind,title,save_file=""):
-   """
-   Returns the results as string.
-   """
-   
-   fig, ax = plt.subplots()   
-         
-   if kind == "pie":
-      pupsi ='%1.f%%'   
-      data.plot(kind=kind, autopct=pupsi, ylabel="", cmap="Pastel1")
-   else: 
-      #total = data.sum()
-      #percentage = []
-      #for i in data:
-      #   pass
-         #pct = (i / total) * 100
-         #percentage.append(round(pct, 2))
-      #ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
-      #print(data)
-      data.plot(kind=kind)
       
-      #for container in ax.containers:
-      #   ax.bar_label(container)
-           
-   if title:
-      ax.set_title(title)
-      
-   if save_file:
-      fig.savefig(save_file)
-      plt.close(fig)
-      print("Image saved under {}".format(save_file))
-   
-   plt.close()
-   
-   return
-      
-def analyze_data():
+def process_data():
    
    data_file = os.path.join("data","2024-10-08_Svar-til-sporreundersokelsen-om-universell-utforming-av-cookies.csv")
    if not os.path.exists(data_file):
@@ -386,4 +352,4 @@ def analyze_data():
       outfile.write(res_str)   
 
 if __name__=='__main__':
-  analyze_data()
+  process_data()
