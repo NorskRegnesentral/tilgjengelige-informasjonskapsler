@@ -148,10 +148,8 @@ def process_data():
                else:
                   multiple_groups = []
                   for operator in subset_values["operators"]:
-                     #print(operator)
                      if operator[0] == "equal to":
                         curr_data_subset = curr_data_set[curr_data_set[var_subset]==operator[1]]
-                        #print(var_subset,curr_data_subset)
                      elif operator[0] == "not equal to":
                         curr_data_subset = curr_data_set[curr_data_set[var_subset]!=operator[1]]
                      else:
@@ -161,14 +159,8 @@ def process_data():
                      multiple_groups.append(curr_grouped_data_subset)
                   
                   grouped_data_subset = pd.concat(multiple_groups,axis=1)
-                  
-               if "pupsi" in curr_subset_title:
-                  #grouped_data_subset.plot(kind="bar")
-                  #plt.show()
-                  print(grouped_data_subset)
                      
                save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
-               #print(grouped_data_subset)
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
                res_str  += "```\n{}\n```".format(curr_res)
    

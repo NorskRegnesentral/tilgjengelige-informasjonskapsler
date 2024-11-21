@@ -7,15 +7,13 @@ def plot_data(data,kind,title,save_file=""):
    """
    Returns the results as string.
    """
-   if "pupsi" in title:
-      data.plot(kind=kind)
-      plt.show()
    
+   colors = "Pastel1"
    fig, ax = plt.subplots()   
          
    if kind == "pie":
       pupsi ='%1.f%%'   
-      data.plot(kind=kind, autopct=pupsi, ylabel="", cmap="Pastel1")
+      data.plot(kind=kind, ax=ax,autopct=pupsi, ylabel="", cmap=colors)
    else: 
       #total = data.sum()
       #percentage = []
@@ -25,13 +23,10 @@ def plot_data(data,kind,title,save_file=""):
          #percentage.append(round(pct, 2))
       #ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
       #print(data)
-      data.plot(kind=kind,ax=ax)
+      data.plot(kind=kind,ax=ax,cmap=colors)
       
-      if "pupsi" in title:
-         plt.show()
-      
-      #for container in ax.containers:
-      #   ax.bar_label(container)
+      for container in ax.containers:
+         ax.bar_label(container)
            
    if title:
       ax.set_title(title)
