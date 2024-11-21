@@ -7,6 +7,9 @@ def plot_data(data,kind,title,save_file=""):
    """
    Returns the results as string.
    """
+   if "pupsi" in title:
+      data.plot(kind=kind)
+      plt.show()
    
    fig, ax = plt.subplots()   
          
@@ -22,7 +25,10 @@ def plot_data(data,kind,title,save_file=""):
          #percentage.append(round(pct, 2))
       #ax = round(data/total*100).plot(kind=kind, ylabel="%", cmap="Pastel1")
       #print(data)
-      data.plot(kind=kind)
+      data.plot(kind=kind,ax=ax)
+      
+      if "pupsi" in title:
+         plt.show()
       
       #for container in ax.containers:
       #   ax.bar_label(container)
