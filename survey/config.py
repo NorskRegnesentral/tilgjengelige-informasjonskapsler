@@ -56,7 +56,7 @@ tasks = {
          "subsets": {
             4: {
                "var": "funksjonsnedsettelse",
-               "operators": [("equal to","Ja"), ("not equal to","Ja")],
+               "operators": [("equal to","Ja","with-impair"), ("not equal to","Ja","without-impair")],
                "file-app": "pupsi",
                "title-app": "pupsi"
                },

@@ -156,6 +156,12 @@ def process_data():
                         print("Unknown operator chosen for the subset: {}".format(operator[0])) 
                         continue
                      curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+                     curr_grouped_data_subset = curr_grouped_data_subset.to_frame()
+                     
+                     if len(operator)>2:
+                        old_column = curr_grouped_data_subset.columns[0]
+                        new_column = operator[2]
+                        curr_grouped_data_subset = curr_grouped_data_subset.rename({old_column: new_column},axis="columns")
                      multiple_groups.append(curr_grouped_data_subset)
                   
                   grouped_data_subset = pd.concat(multiple_groups,axis=1)
