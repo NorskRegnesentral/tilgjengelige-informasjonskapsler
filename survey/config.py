@@ -8,6 +8,46 @@ import os
 import pandas as pd
 
 tasks = {
+   
+   # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
+   8: {
+         "var":     ["vanskelighetsgrad-valg"],
+         "sets":    ["no","se","all"],
+         "subsets": {
+            1: {
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("equal to","Ja")],
+               "file-app":    "with-impairment-only",
+               "title-app":   "with impairment (not %)",
+               "is-percentage":  False
+               },
+            2: {
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("not equal to","Ja")],
+               "file-app":    "without-impairment-only",
+               "title-app":   "without impairment (not %)",
+               "is-percentage":  False
+               },
+            3: {
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("not equal to","Ja","others"),("equal to","Ja","with-impair")],
+               "file-app":    "impair-v-others-pct",
+               "title-app":   "Impairments vs. Others (%)",
+               "is-percentage":  True
+               },
+            4: {
+               "var":         "funksjonsnedsettelse",
+               "operators":   [],
+               "file-app":    "all-abilities",
+               "title-app":   "all abilities"
+               },
+         },
+         "title":   "What do you think about finding choices in cookie settings?",
+         "kind":    "bar"
+      },
+   }
+
+tasks2 = {
       
    # 0. country as pie chart
    0: { 
@@ -56,9 +96,9 @@ tasks = {
          "subsets": {
             4: {
                "var": "funksjonsnedsettelse",
-               "operators": [("equal to","Ja","with-impair"), ("not equal to","Ja","without-impair")],
-               "file-app": "pupsi",
-               "title-app": "pupsi"
+               "operators": [("equal to","Ja","with-impair"), ("not equal to","Ja","others")],
+               "file-app": "impair-v-others",
+               "title-app": "Impairments vs. Others"
                },
             1: {
                "var": "funksjonsnedsettelse",
@@ -79,7 +119,7 @@ tasks = {
                "title-app": "all abilities"
                }
          },
-         "title":   "What do you usually do with the cookie settings?",
+         "title":   "Hvordan håndterer du varsler om informasjonskapsler?",
          "kind":    "bar"
       },
    
@@ -107,7 +147,7 @@ tasks = {
                "title-app": "all abilities"
                },
          },
-         "title":   "What do you think about the cookies in general?",
+         "title":   "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
          "kind":    "bar"
       },
    
@@ -135,7 +175,7 @@ tasks = {
                "title-app": "all abilities"
                },
          },
-         "title": "What do you think about the text in cookie settings?",
+         "title": "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":  "bar"
       },
    
@@ -145,31 +185,34 @@ tasks = {
          "sets":    ["no","se","all"],
          "subsets": {
             1: {
-               "var": "funksjonsnedsettelse",
-               "operators": [("equal to","Ja")],
-               "file-app": "with-impairment",
-               "title-app": "with impairment"
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("equal to","Ja")],
+               "file-app":    "with-impairment-only",
+               "title-app":   "with impairment (not %)",
+               "is-percentage":  False
                },
             2: {
-               "var": "funksjonsnedsettelse",
-               "operators": [("not equal to","Ja")],
-               "file-app": "without-impairment",
-               "title-app": "without impairment"
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("not equal to","Ja")],
+               "file-app":    "without-impairment-only",
+               "title-app":   "without impairment (not %)",
+               "is-percentage":  False
                },
             3: {
-               "var": "funksjonsnedsettelse",
-               "operators": [],
-               "file-app": "all-abilities",
-               "title-app": "all abilities"
+               "var":         "funksjonsnedsettelse",
+               "operators":   [("not equal to","Ja","others"),("equal to","Ja","with-impair")],
+               "file-app":    "impair-v-others-pct",
+               "title-app":   "Impairments vs. Others (%)",
+               "is-percentage":  True
                },
             4: {
-               "var": "funksjonsnedsettelse",
-               "operators": [("equal to","Ja"), ("not equal to","Ja")],
-               "file-app": "pupsi",
-               "title-app": "pupsi"
-               }
+               "var":         "funksjonsnedsettelse",
+               "operators":   [],
+               "file-app":    "all-abilities",
+               "title-app":   "all abilities"
+               },
          },
-         "title":   "What do you think about finding choices in cookie settings?",
+         "title":   "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
          "kind":    "bar"
       },
    }

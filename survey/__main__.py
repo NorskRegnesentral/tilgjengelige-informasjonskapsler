@@ -36,7 +36,6 @@ def process_data():
    
    1. Defining data sets.
    """
-   
    # I think this is the cleanest way but I encourage you to prove me wrong.
    df_all          = pd.read_csv(data_file,sep=";")
    df_norway_only  = df_all[df_all["land"] == "Ukjent"]
@@ -139,6 +138,7 @@ def process_data():
                
                curr_data_subset    = curr_data_set
                grouped_data_subset = []
+               is_percentage       = False
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
                   # Do exactly as above
@@ -165,9 +165,12 @@ def process_data():
                      multiple_groups.append(curr_grouped_data_subset)
                   
                   grouped_data_subset = pd.concat(multiple_groups,axis=1)
+                  
+                  if "is-percentage" in subset_values:
+                     is_percentage = subset_values["is-percentage"]
                      
                save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
-               plot_data(grouped_data_subset,kind,curr_subset_title,save_file) # Here, the actually analysis is triggered
+               plot_data(grouped_data_subset,kind,curr_subset_title,save_file,is_percentage) # Here, the actually analysis is triggered
                res_str  += "```\n{}\n```".format(curr_res)
    
    """
