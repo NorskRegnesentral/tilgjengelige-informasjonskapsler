@@ -19,8 +19,13 @@ def prepare_data(data,group_by):
    if not group_by:
       print("No paramter for grouping the data has been chosen")
       return
+   if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]:
+      repl_lut = config.lookup["answers-repl"][group_by]
+      
+      data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
          
    curr_data = data.groupby(group_by)[group_by].count()
+   curr_data = curr_data.to_frame()
    
    return curr_data, "{}".format(data)
       
@@ -156,7 +161,7 @@ def process_data():
                         print("Unknown operator chosen for the subset: {}".format(operator[0])) 
                         continue
                      curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
-                     curr_grouped_data_subset = curr_grouped_data_subset.to_frame()
+                     #curr_grouped_data_subset = curr_grouped_data_subset.to_frame()
                      
                      if len(operator)>2:
                         old_column = curr_grouped_data_subset.columns[0]

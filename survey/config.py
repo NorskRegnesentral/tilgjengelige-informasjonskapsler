@@ -9,6 +9,40 @@ import pandas as pd
 
 tasks = {
    
+   # 5. default choices as bar chart separated by impairment (with, without, combined)
+   5: {
+         "var":     ["default-valg"],
+         "sets":    ["no","se","all"],
+         "subsets": {
+            4: {
+               "var": "funksjonsnedsettelse",
+               "operators": [("equal to","Ja","with-impair"), ("not equal to","Ja","others")],
+               "file-app": "impair-v-others",
+               "title-app": "Impairments vs. Others"
+               },
+            1: {
+               "var": "funksjonsnedsettelse",
+               "operators": [("equal to","Ja")],
+               "file-app": "with-impairment",
+               "title-app": "with impairment"
+               },
+            2: {
+               "var": "funksjonsnedsettelse",
+               "operators": [("not equal to","Ja")],
+               "file-app": "without-impairment",
+               "title-app": "without impairment"
+               },
+            3: {
+               "var": "funksjonsnedsettelse",
+               "operators": [],
+               "file-app": "all-abilities",
+               "title-app": "all abilities"
+               }
+         },
+         "title":   "Hvordan håndterer du varsler om informasjonskapsler?",
+         "kind":    "bar"
+      },
+   
    # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
    8: {
          "var":     ["vanskelighetsgrad-valg"],
@@ -61,7 +95,7 @@ tasks2 = {
    1: {
          "var":   ["alder"],
          "sets":  ["no","se","all"],
-         "title": "How old were the participants?",
+         "title": "Hvor gammel er du?",
          "kind":  "pie"
       },
    
@@ -69,7 +103,7 @@ tasks2 = {
    2: {
          "var": ["kjonn"],
          "sets":  ["no","se","all"],
-         "title": "Which gender did the participants report?",
+         "title": "Er du ...?",
          "kind":  "pie"
       },
    
@@ -77,7 +111,7 @@ tasks2 = {
    3: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["no","se","all"],
-         "title": "How many participatns had impairment(s)?",
+         "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
          "kind":  "pie"
       },
    
@@ -85,7 +119,7 @@ tasks2 = {
    4: {
          "var": ["internettvaner"],
          "sets":  ["no","se","all"],
-         "title": "How often do you use the Internet?",
+         "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie"
       },
    
@@ -212,9 +246,18 @@ tasks2 = {
                "title-app":   "all abilities"
                },
          },
-         "title":   "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
-         "kind":    "bar"
+         "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
+         "kind":     "bar",
+         "fig_size": (10,6)
       },
+   }
+
+vanskelighetsgrad = {
+   1: "Veldig lett",
+   2: "Ganske lett",
+   3: "Verken lett/\neller vanskelig",
+   4: "Ganske vanskelig",
+   5: "Veldig vanskelig"   
    }
 
 # The data sets are determined programmatically in the main module under key "data_set"
@@ -228,5 +271,16 @@ lookup = {
       "no": "Norway only",
       "se": "Sweden only",
       "all": "All countries combined"
+      },
+   "answers-repl": {
+      "default-valg": {
+         "Jeg ignorerer dem.": "Ignorere",
+         "Jeg godtar alle cookies uten å lese informasjonsteksten.": "Godta",
+         "Jeg avviser alle cookies, hvis mulig.": "Avvise",
+         "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Tilpasse",
+         },
+      "vanskelighetsgrad-generell": vanskelighetsgrad,
+      "vanskelighetsgrad-tekst": vanskelighetsgrad,
+      "vanskelighetsgrad-valg": vanskelighetsgrad,
       }
    }
