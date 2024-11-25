@@ -208,10 +208,10 @@ def process_data():
                rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
                rel_save_file = PurePath(rel_save_file).as_posix()
                
-               res_str += "\n![{}]({})\n\n".format(curr_subset_title.replace('\n',''),rel_save_file)
+               res_str += "\n![{}]({})\n".format(curr_subset_title.replace('\n',''),rel_save_file)
                
                if not is_percentage:
-                  res_str  += "```\n{}\n```".format(curr_res)
+                  res_str  += "\n```\n{}\n```\n".format(curr_res)
    
    """
    5. Writing the results to a text file.
