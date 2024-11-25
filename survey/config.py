@@ -129,7 +129,7 @@ tasks = {
          "title":    "Hvordan håndterer du varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 5. default choices as bar chart separated by impairment (with, without, combined)
@@ -164,7 +164,7 @@ tasks = {
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 6. general difficulty as bar chart separated by impairment (with, without, combined)
@@ -198,7 +198,7 @@ tasks = {
          "title":    "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 6. general difficulty as bar chart separated by impairment (with, without, combined)
@@ -233,7 +233,7 @@ tasks = {
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 7. text difficulty a bar chart separated by impairment (with, without, combined)
@@ -267,7 +267,7 @@ tasks = {
          "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 7. text difficulty a bar chart separated by impairment (with, without, combined)
@@ -302,7 +302,7 @@ tasks = {
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
@@ -336,7 +336,7 @@ tasks = {
          "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    
    # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
@@ -371,7 +371,7 @@ tasks = {
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  bar_color
       },
    }
 
