@@ -1,6 +1,6 @@
 # Results from the survey
 
-## From which country did the answers come in? (Sweden only)
+## 0. From which country did the answers come in? (Sweden only)
 
 ![From which country did the answers come in? Sweden only](results/00-land-sweden-only.png)
 
@@ -20,7 +20,7 @@ United Kingdom     5
 United States      1
 ```
 
-## Hvor gammel er du? (Sweden only)
+## 10. Hvor gammel er du? (Sweden only)
 
 ![Hvor gammel er du? Sweden only](results/sverige/10-alder-sweden-only.png)
 
@@ -32,7 +32,7 @@ alder
 66 og eldre      4
 ```
 
-## Er du ...? (Sweden only)
+## 20. Er du ...? (Sweden only)
 
 ![Er du ...? Sweden only](results/sverige/20-kjonn-sweden-only.png)
 
@@ -43,7 +43,7 @@ Kvinne     29
 Mann       12
 ```
 
-## Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (Sweden only)
+## 30. Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (Sweden only)
 
 ![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? Sweden only](results/sverige/30-funksjonsnedsettelse-sweden-only.png)
 
@@ -55,7 +55,7 @@ Nei                                     27
 Ønsker ikke å oppgi                      2
 ```
 
-## Hvor ofte bruker du Internett? (Sweden only)
+## 40. Hvor ofte bruker du Internett? (Sweden only)
 
 ![Hvor ofte bruker du Internett? Sweden only](results/sverige/40-internettvaner-sweden-only.png)
 
@@ -66,7 +66,7 @@ Daglig                              4
 Flere ganger om dagen              37
 ```
 
-## Hvordan håndterer du varsler om informasjonskapsler? (Sweden only)
+## 50. Hvordan håndterer du varsler om informasjonskapsler? (Sweden only)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -79,7 +79,7 @@ Flere ganger om dagen              37
 ```
               without-impair  with-impair
 default-valg                             
-Avvise                  15.0            5
+Avvise                  17.0            5
 Godta                    7.0            4
 Tilpasse                 5.0            2
 Ignorere                 NaN            1
@@ -99,7 +99,7 @@ Tilpasse                 7
 ```
 
 
-## Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Sweden only)
+## 60. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Sweden only)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -114,8 +114,8 @@ Tilpasse                 7
 vanskelighetsgrad-generell                                    
 1 - Veldig lett                                 1          NaN
 2 - Ganske lett                                 4          2.0
-3 - Verken lett/\neller vanskelig              11          4.0
-4 - Ganske vanskelig                            8          4.0
+3 - Verken lett/\neller vanskelig              12          4.0
+4 - Ganske vanskelig                            9          4.0
 5 - Veldig vanskelig                            3          2.0
 ```
 
@@ -134,7 +134,7 @@ vanskelighetsgrad-generell
 ```
 
 
-## Hva synes du generelt om teksten i varsler om informasjonskapsler? (Sweden only)
+## 70. Hva synes du generelt om teksten i varsler om informasjonskapsler? (Sweden only)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -150,9 +150,9 @@ vanskelighetsgrad-tekst
 -1 - Svarte ikke                                1            1
 1 - Veldig lett                                 3            1
 2 - Ganske lett                                 3            1
-3 - Verken lett/\neller vanskelig              11            3
+3 - Verken lett/\neller vanskelig              12            3
 4 - Ganske vanskelig                            7            4
-5 - Veldig vanskelig                            2            2
+5 - Veldig vanskelig                            3            2
 ```
 
 ### Subset all abilities
@@ -171,7 +171,7 @@ vanskelighetsgrad-tekst
 ```
 
 
-## Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Sweden only)
+## 80. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Sweden only)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -186,9 +186,9 @@ vanskelighetsgrad-tekst
 vanskelighetsgrad-valg                                        
 1 - Veldig lett                                 4          1.0
 2 - Ganske lett                                 3          NaN
-3 - Verken lett/\neller vanskelig               8          2.0
+3 - Verken lett/\neller vanskelig               9          2.0
 4 - Ganske vanskelig                           11          5.0
-5 - Veldig vanskelig                            1          4.0
+5 - Veldig vanskelig                            2          4.0
 ```
 
 ### Subset all abilities

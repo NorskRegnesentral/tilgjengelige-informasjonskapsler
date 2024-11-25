@@ -1,6 +1,6 @@
 # Results from the survey
 
-## Hvor gammel er du? (All countries combined)
+## 1. Hvor gammel er du? (All countries combined)
 
 ![Hvor gammel er du? All countries combined](results/01-alder-all-countries.png)
 
@@ -13,7 +13,7 @@ alder
 66 og eldre     73
 ```
 
-## Er du ...? (All countries combined)
+## 2. Er du ...? (All countries combined)
 
 ![Er du ...? All countries combined](results/02-kjonn-all-countries.png)
 
@@ -25,7 +25,7 @@ Kvinne         88
 Mann           59
 ```
 
-## Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (All countries combined)
+## 3. Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (All countries combined)
 
 ![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? All countries combined](results/03-funksjonsnedsettelse-all-countries.png)
 
@@ -37,7 +37,7 @@ Nei                                    112
 Ønsker ikke å oppgi                      3
 ```
 
-## Hvor ofte bruker du Internett? (All countries combined)
+## 4. Hvor ofte bruker du Internett? (All countries combined)
 
 ![Hvor ofte bruker du Internett? All countries combined](results/04-internettvaner-all-countries.png)
 
@@ -49,7 +49,7 @@ Flere ganger om dagen             112
 Ukentlig                            3
 ```
 
-## Hvordan håndterer du varsler om informasjonskapsler? (All countries combined)
+## 5. Hvordan håndterer du varsler om informasjonskapsler? (All countries combined)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -82,7 +82,7 @@ Tilpasse                30
 ```
 
 
-## Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (All countries combined)
+## 6. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (All countries combined)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -117,7 +117,7 @@ vanskelighetsgrad-generell
 ```
 
 
-## Hva synes du generelt om teksten i varsler om informasjonskapsler? (All countries combined)
+## 7. Hva synes du generelt om teksten i varsler om informasjonskapsler? (All countries combined)
 
 ### Subset With vs. Witout Impairment (%)
 
@@ -154,7 +154,7 @@ vanskelighetsgrad-tekst
 ```
 
 
-## Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (All countries combined)
+## 8. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (All countries combined)
 
 ### Subset With vs. Witout Impairment (%)
 
