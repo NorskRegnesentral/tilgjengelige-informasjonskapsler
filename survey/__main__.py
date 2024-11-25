@@ -113,11 +113,14 @@ def process_data():
          res_str       += "\n\n### {}\n".format(curr_title) # This needs to be changed maybe
          
          ext       = "png"
+         fig_size  = ()
+         if "fig_size" in values:
+            fig_size = values["fig_size"]
          curr_res  = "" 
          if  not "subsets" in values or not values["subsets"]:   
             save_file = os.path.join("results","{:02d}-{}-{}.{}".format(key,var,appendix,ext))
             grouped_data, curr_res = prepare_data(curr_data_set,var)
-            curr_res  = plot_data(grouped_data,kind,curr_title,save_file) # Here, the actually analysis is triggered
+            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size) # Here, the actually analysis is triggered
             res_str  += "```\n{}\n```".format(curr_res)
          else:
             
@@ -170,12 +173,13 @@ def process_data():
                      multiple_groups.append(curr_grouped_data_subset)
                   
                   grouped_data_subset = pd.concat(multiple_groups,axis=1)
+                  curr_res = "{}".format(grouped_data_subset)
                   
                   if "is-percentage" in subset_values:
                      is_percentage = subset_values["is-percentage"]
-                     
+               
                save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
-               plot_data(grouped_data_subset,kind,curr_subset_title,save_file,is_percentage) # Here, the actually analysis is triggered
+               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size) # Here, the actually analysis is triggered
                res_str  += "```\n{}\n```".format(curr_res)
    
    """
