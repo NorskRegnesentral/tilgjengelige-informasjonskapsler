@@ -19,6 +19,7 @@ def prepare_data(data,group_by):
    if not group_by:
       print("No paramter for grouping the data has been chosen")
       return
+   
    if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]:
       repl_lut = config.lookup["answers-repl"][group_by]
       
@@ -27,7 +28,7 @@ def prepare_data(data,group_by):
    curr_data = data.groupby(group_by)[group_by].count()
    curr_data = curr_data.to_frame()
    
-   return curr_data, "{}".format(data)
+   return curr_data, "{}".format(curr_data)
       
 def process_data():
    
@@ -66,6 +67,7 @@ def process_data():
    """
    4. Conducting the analysis
    """
+   res_file = os.path.join("RESULTS.md")
    res_str = "# Results from the survey" # All results will be stored in a text file, next to th graphs.
    
    for key,values in tasks.items():
@@ -116,10 +118,16 @@ def process_data():
          fig_size  = ()
          if "fig_size" in values:
             fig_size = values["fig_size"]
+         is_percentage       = False
          curr_res  = "" 
          if  not "subsets" in values or not values["subsets"]:   
-            save_file = os.path.join("results","{:02d}-{}-{}.{}".format(key,var,appendix,ext))
+            target_folder = ""
+            if "target-folder" in values:
+               target_folder = values["target-folder"]
+            save_file = os.path.join("results",target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
+
             grouped_data, curr_res = prepare_data(curr_data_set,var)
+            grouped_data = grouped_data.dropna()
             plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size) # Here, the actually analysis is triggered
             res_str  += "```\n{}\n```".format(curr_res)
          else:
@@ -146,7 +154,6 @@ def process_data():
                
                curr_data_subset    = curr_data_set
                grouped_data_subset = []
-               is_percentage       = False
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
                   # Do exactly as above
@@ -178,14 +185,25 @@ def process_data():
                   if "is-percentage" in subset_values:
                      is_percentage = subset_values["is-percentage"]
                
-               save_file = os.path.join("results","{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
+               target_folder = ""
+               if "target-folder" in values:
+                  target_folder = values["target-folder"]
+               sub_target_folder = ""
+               if "target-folder" in subset_values:
+                  sub_target_folder = subset_values["target-folder"]
+               save_file = os.path.join("results",target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
+               
+               grouped_data_subset = grouped_data_subset.dropna()
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size) # Here, the actually analysis is triggered
-               res_str  += "```\n{}\n```".format(curr_res)
+               
+               rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
+               res_str += "![{}]({})\n".format(curr_subset_title,rel_save_file)
+               if not is_percentage:
+                  res_str  += "```\n{}\n```".format(curr_res)
    
    """
    5. Writing the results to a text file.
    """
-   res_file = os.path.join("results","RESULTS.md")
    with open(res_file,"w",encoding="utf-8") as outfile:
       outfile.write(res_str)   
 
