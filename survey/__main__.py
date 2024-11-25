@@ -68,8 +68,10 @@ def process_data():
    """
    4. Conducting the analysis
    """
-   res_file = os.path.join("RESULTS.md")
+   res_file = "" # Will be initiated later
    res_str = "# Results from the survey" # All results will be stored in a text file, next to th graphs.
+   
+   res_dict = {} # Make one individual result file for each set
    
    for key,values in tasks.items():
       
@@ -97,7 +99,7 @@ def process_data():
       title = ""
       if "title" in values:
          title = values["title"]
-         res_str += "\n\n## {}".format(title) 
+         res_str += "\n\n## {}".format(title)
          
       for set in values["sets"]:
          
@@ -105,6 +107,12 @@ def process_data():
             print("No data set exists for {}.".format(set))
             continue
          curr_data_set = lookup["data_set"][set]
+         
+         #TODO: This should be a separate function initiate_res_dict
+         if set not in res_dict:
+            res_dict[set] = {}
+            res_dict[set]["str"]  = res_str # From here on we are just going to use the res_str from the dictionary 
+            res_dict[set]["file"] = os.path.join("RESULTS-{}.md".format(set)).upper()
          
          if not set in lookup["file-app"] and not lookup["file-app"][set]:
             appendix = set
@@ -116,9 +124,9 @@ def process_data():
          if set in lookup["title-app"]:
             tmp_title  = lookup["title-app"][set]
          else:
-            tmp_title  = set    
-         curr_title += "\n{}".format(tmp_title)
-         res_str       += "\n\n### {}\n".format(tmp_title) # This needs to be changed maybe
+            tmp_title   = set    
+         curr_title    += "\n{}".format(tmp_title)
+         res_dict[set]["str"]  = res_dict[set]["str"] + "\n\n### {}\n".format(tmp_title) # This needs to be changed maybe
          
          ext       = "png"
          fig_size  = ()
@@ -135,13 +143,13 @@ def process_data():
             grouped_data, curr_res = prepare_data(curr_data_set,var)
             plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
             
-            rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
+            rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
             rel_save_file = PurePath(rel_save_file).as_posix()
             
-            res_str += "\n![{}]({})\n\n".format(curr_title.replace('\n',' '),rel_save_file)
+            res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n\n".format(curr_title.replace('\n',' '),rel_save_file)
             
             if not is_percentage:
-               res_str  += "```\n{}\n```".format(curr_res)
+               res_dict[set]["str"] = res_dict[set]["str"] + "```\n{}\n```".format(curr_res)
          else:
             
             for subset_key,subset_values in values["subsets"].items(): # values["subsets"] is supposed a dict
@@ -164,7 +172,7 @@ def process_data():
                else:
                   tmp_subset_title = subset_values["title-app"]
                curr_subset_title += ", {}".format(tmp_subset_title)
-               res_str           += "\n#### Subset {}\n".format(tmp_subset_title) # This needs to be changed maybe
+               res_dict[set]["str"] = res_dict[set]["str"] + "\n#### Subset {}\n".format(tmp_subset_title) # This needs to be changed maybe
                
                curr_data_subset    = curr_data_set
                grouped_data_subset = []
@@ -208,19 +216,31 @@ def process_data():
                grouped_data_subset = grouped_data_subset.dropna()
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
                
-               rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
+               rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
                rel_save_file = PurePath(rel_save_file).as_posix()
                
-               res_str += "\n![{}]({})\n".format(curr_subset_title.replace('\n',''),rel_save_file)
+               res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n".format(curr_subset_title.replace('\n',''),rel_save_file)
                
                if not is_percentage:
-                  res_str  += "\n```\n{}\n```\n".format(curr_res)
+                  res_dict[set]["str"] = res_dict[set]["str"] + "\n```\n{}\n```\n".format(curr_res)
    
    """
    5. Writing the results to a text file.
    """
-   with open(res_file,"w",encoding="utf-8") as outfile:
-      outfile.write(res_str)   
-
+   for set,values in res_dict.items():
+      if not "str" in values:
+         print("No results have been recorded for set \"{}\"".format(set))
+      
+      if not "file" in values:
+         print("No save file has been chosen for set \"{}\"".format(set))
+      
+      res_str  = values["str"]
+      res_file = values["file"]
+      
+      with open(res_file,"w",encoding="utf-8") as outfile:
+         outfile.write(res_str)   
+      
+      print("Results for set \"{}\" have been saved in {}.".format(set,res_file)) 
+      
 if __name__=='__main__':
   process_data()
