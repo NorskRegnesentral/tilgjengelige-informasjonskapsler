@@ -215,7 +215,7 @@ def process_data():
                   sub_target_folder = subset_values["target-folder"]
                save_file = os.path.join("results",target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                
-               grouped_data_subset = grouped_data_subset.dropna()
+               grouped_data_subset = grouped_data_subset#.dropna()
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
                
                rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))

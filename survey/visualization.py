@@ -29,7 +29,7 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=
          pct = round((data/total) * 100,0)
          data = pct
       
-      data.plot(kind=kind,ax=ax, cmap=colors)
+      data.plot(kind=kind,ax=ax,cmap=colors)
       
       for container in ax.containers:
          ax.bar_label(container)
