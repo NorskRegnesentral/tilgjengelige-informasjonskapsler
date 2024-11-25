@@ -5,12 +5,15 @@ import matplotlib.pyplot as plt
 
 import config
 
-def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=()):
+def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=""):
    """
    Returns the results as string.
    """
    
-   colors = "tab20"
+   colors = "Paired"
+   if cmap:
+      colors = cmap
+      
    fig, ax = plt.subplots()
    
    if fig_size:

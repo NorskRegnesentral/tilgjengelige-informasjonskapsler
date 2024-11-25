@@ -90,6 +90,9 @@ def process_data():
             
       var  = values["var"][0]
       kind = values["kind"]
+      cmap = ""
+      if "cmap" in values:
+         cmap = values["cmap"]
       
       title = ""
       if "title" in values:
@@ -130,7 +133,7 @@ def process_data():
             save_file = os.path.join("results",target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
             grouped_data, curr_res = prepare_data(curr_data_set,var)
-            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size) # Here, the actually analysis is triggered
+            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
             
             rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
             rel_save_file = PurePath(rel_save_file).as_posix()
@@ -203,7 +206,7 @@ def process_data():
                save_file = os.path.join("results",target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                
                grouped_data_subset = grouped_data_subset.dropna()
-               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size) # Here, the actually analysis is triggered
+               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
                
                rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
                rel_save_file = PurePath(rel_save_file).as_posix()

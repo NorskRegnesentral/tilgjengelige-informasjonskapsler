@@ -7,6 +7,9 @@ Created on 21. nov. 2024
 import os
 import pandas as pd
 
+pie_color = "cool"
+bar_color = "Paired"
+
 tasks = {
       
    # 0. country as pie chart
@@ -15,6 +18,7 @@ tasks = {
          "sets":  ["se"],
          "title": "From which country did the answers come in?",
          "kind":  "pie",
+         "cmap":  "gist_ncar"
       },
    
    # 1. age as pie chart
@@ -22,7 +26,8 @@ tasks = {
          "var":   ["alder"],
          "sets":  ["all"], 
          "title": "Hvor gammel er du?",
-         "kind":  "pie"
+         "kind":  "pie",
+         "cmap":  pie_color
       },
 
    # 10. age as pie chart
@@ -31,7 +36,8 @@ tasks = {
          "sets":          ["se"], #wech: no
          "title":         "Hvor gammel er du?",
          "kind":          "pie",
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 2. gender as pie chart
@@ -39,7 +45,8 @@ tasks = {
          "var": ["kjonn"],
          "sets":  ["all"],
          "title": "Er du ...?",
-         "kind":  "pie"
+         "kind":  "pie",
+         "cmap":  pie_color
       },
    
     # 20. gender as pie chart
@@ -48,7 +55,8 @@ tasks = {
          "sets":  ["se"],
          "title": "Er du ...?",
          "kind":  "pie",
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 3. impairment as pie chart
@@ -56,7 +64,8 @@ tasks = {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["all"], 
          "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
-         "kind":  "pie"
+         "kind":  "pie",
+         "cmap":  pie_color
       },
    
       
@@ -66,7 +75,8 @@ tasks = {
          "sets":  ["se"], 
          "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
          "kind":  "pie",
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -74,7 +84,8 @@ tasks = {
          "var": ["internettvaner"],
          "sets":  ["all"], 
          "title": "Hvor ofte bruker du Internett?",
-         "kind":  "pie"
+         "kind":  "pie",
+         "cmap":  pie_color
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -83,7 +94,8 @@ tasks = {
          "sets":  ["se"], 
          "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie",
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 5. default choices as bar chart separated by impairment (with, without, combined)
@@ -116,7 +128,8 @@ tasks = {
          },
          "title":    "Hvordan håndterer du varsler om informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6)
+         "fig_size": (10,6),
+         "cmap":  pie_color
       },
    
    # 5. default choices as bar chart separated by impairment (with, without, combined)
@@ -150,7 +163,8 @@ tasks = {
          "title":    "Hvordan håndterer du varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 6. general difficulty as bar chart separated by impairment (with, without, combined)
@@ -183,7 +197,8 @@ tasks = {
          },
          "title":    "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6)
+         "fig_size": (10,6),
+         "cmap":  pie_color
       },
    
    # 6. general difficulty as bar chart separated by impairment (with, without, combined)
@@ -217,7 +232,8 @@ tasks = {
          "title":    "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 7. text difficulty a bar chart separated by impairment (with, without, combined)
@@ -250,7 +266,8 @@ tasks = {
          },
          "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6)
+         "fig_size": (10,6),
+         "cmap":  pie_color
       },
    
    # 7. text difficulty a bar chart separated by impairment (with, without, combined)
@@ -284,7 +301,8 @@ tasks = {
          "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    
    # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
@@ -317,7 +335,8 @@ tasks = {
          },
          "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6)
+         "fig_size": (10,6),
+         "cmap":  pie_color
       },
    
    # 8. choice difficulty as bar chart separated by impairment (with, without, combined)
@@ -351,7 +370,8 @@ tasks = {
          "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
          "kind":     "bar",
          "fig_size": (10,6),
-         "target-folder": "sverige"
+         "target-folder": "sverige",
+         "cmap":  pie_color
       },
    }
 
