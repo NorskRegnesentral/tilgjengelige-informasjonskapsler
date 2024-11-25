@@ -10,8 +10,8 @@ Vi vil øke forståelsen av hvordan informasjonskapsler og samtykkeerklæringer 
 
 Mer om prosjektet ligger [her](https://nr.no/prosjekter/tilgjengelige-informasjonskapsler/).
 
-## Resultater
+## Resultater fra spørreundersøkelsen
 
-Resultater er delt opp i:
+Resultater fra spørreundersøkelsen er delt opp i:
 * [resultater fra Norge og Sverige](RESULTS-ALL.md), inkludert de kombinerte resultatene fra Norge og Sverige.
 * [resultater fra Sverige](RESULTS-SE.md). Denne filen ble opprettet for å kvalitetssikre at analysen er riktig gjennomført ved å sammenlikne fra resultatene fra Stiftelsen Funka. 
