@@ -12,6 +12,9 @@ Mer om prosjektet ligger [her](https://nr.no/prosjekter/tilgjengelige-informasjo
 
 ## Resultater fra spørreundersøkelsen
 
+Hvis du vil sjekke resultatene sjølv, kan du laste ned repositoriet til datamaskinen din.
+Så kan du gå i den relevante mappen og starte scriptet ved å bruke ```python review```.
+
 Resultater fra spørreundersøkelsen er delt opp i:
 * [resultater fra Norge og Sverige](RESULTS-ALL.md), inkludert de kombinerte resultatene fra Norge og Sverige.
 * [resultater fra Sverige](RESULTS-SE.md). Denne filen ble opprettet for å kvalitetssikre at analysen er riktig gjennomført ved å sammenlikne fra resultatene fra Stiftelsen Funka. 
