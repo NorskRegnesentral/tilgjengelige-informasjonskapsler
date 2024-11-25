@@ -7,6 +7,7 @@
 """
 
 import os
+from pathlib import PurePath
 import config
 
 import pandas as pd
@@ -108,11 +109,13 @@ def process_data():
             appendix = lookup["file-app"][set]
          
          curr_title    = title
+         tmp_title     = ""
          if set in lookup["title-app"]:
-            curr_title += "\n{}".format(lookup["title-app"][set])
+            tmp_title  = lookup["title-app"][set]
          else:
-            curr_title += "\n{}".format(set)
-         res_str       += "\n\n### {}\n".format(curr_title) # This needs to be changed maybe
+            tmp_title  = set    
+         curr_title += "\n{}".format(tmp_title)
+         res_str       += "\n\n### {}\n".format(tmp_title) # This needs to be changed maybe
          
          ext       = "png"
          fig_size  = ()
@@ -127,9 +130,15 @@ def process_data():
             save_file = os.path.join("results",target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
             grouped_data, curr_res = prepare_data(curr_data_set,var)
-            grouped_data = grouped_data.dropna()
             plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size) # Here, the actually analysis is triggered
-            res_str  += "```\n{}\n```".format(curr_res)
+            
+            rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
+            rel_save_file = PurePath(rel_save_file).as_posix()
+            
+            res_str += "\n![{}]({})\n\n".format(curr_title.replace('\n',' '),rel_save_file)
+            
+            if not is_percentage:
+               res_str  += "```\n{}\n```".format(curr_res)
          else:
             
             for subset_key,subset_values in values["subsets"].items(): # values["subsets"] is supposed a dict
@@ -146,18 +155,18 @@ def process_data():
                   subset_appendix += "-subset-{}".format(subset_key)
                
                curr_subset_title = curr_title
-               if not "title-app" in subset_values or subset_values["title-app"]:
-                  curr_subset_title += ", subset {}".format(subset_values["title-app"])
+               tmp_subset_title  = ""
+               if not "title-app" in subset_values or not subset_values["title-app"]:
+                  tmp_subset_title = "subset {}".format(subset_key)
                else:
-                  curr_subset_title += ", {}".format(subset_values["title-app"])
-               res_str       += "\n### Subset {}\n".format(curr_subset_title) # This needs to be changed maybe
+                  tmp_subset_title = subset_values["title-app"]
+               curr_subset_title += ", {}".format(tmp_subset_title)
+               res_str           += "\n#### Subset {}\n".format(tmp_subset_title) # This needs to be changed maybe
                
                curr_data_subset    = curr_data_set
                grouped_data_subset = []
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
-                  # Do exactly as above
-                  #pass
                   grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
                
                else:
@@ -197,7 +206,10 @@ def process_data():
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size) # Here, the actually analysis is triggered
                
                rel_save_file = os.path.relpath(save_file,os.path.dirname(res_file))
-               res_str += "![{}]({})\n".format(curr_subset_title,rel_save_file)
+               rel_save_file = PurePath(rel_save_file).as_posix()
+               
+               res_str += "\n![{}]({})\n\n".format(curr_subset_title.replace('\n',''),rel_save_file)
+               
                if not is_percentage:
                   res_str  += "```\n{}\n```".format(curr_res)
    
