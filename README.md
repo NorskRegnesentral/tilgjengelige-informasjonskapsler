@@ -15,3 +15,7 @@ Mer om prosjektet ligger [her](https://nr.no/prosjekter/tilgjengelige-informasjo
 Resultater fra spørreundersøkelsen er delt opp i:
 * [resultater fra Norge og Sverige](RESULTS-ALL.md), inkludert de kombinerte resultatene fra Norge og Sverige.
 * [resultater fra Sverige](RESULTS-SE.md). Denne filen ble opprettet for å kvalitetssikre at analysen er riktig gjennomført ved å sammenlikne fra resultatene fra Stiftelsen Funka. 
+
+OBS: There is a difference in how user with and without impairments are determined:
+* In the data from Sverige only, groups according to impairment are defined as people who _did answer yes__ and people who did _not answer yes_ to the relevant question impairment. People who did not want to share are included with people without impairment.
+* In the combined data, groups according to impairment are defined as people who _did answer yes_ and people who _did answer no_ to the relevant question of impairment. People who did not want to share are excluded from the results.
