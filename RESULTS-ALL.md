@@ -1,10 +1,6 @@
 # Results from the survey
 
-## From which country did the answers come in?
-
-## Hvor gammel er du?
-
-### All countries combined
+## Hvor gammel er du? (All countries combined)
 
 ![Hvor gammel er du? All countries combined](results/01-alder-all-countries.png)
 
@@ -17,7 +13,7 @@ alder
 66 og eldre     73
 ```
 
-### All countries combined
+## Er du ...? (All countries combined)
 
 ![Er du ...? All countries combined](results/02-kjonn-all-countries.png)
 
@@ -29,7 +25,7 @@ Kvinne         88
 Mann           59
 ```
 
-### All countries combined
+## Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (All countries combined)
 
 ![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? All countries combined](results/03-funksjonsnedsettelse-all-countries.png)
 
@@ -41,7 +37,7 @@ Nei                                    112
 Ønsker ikke å oppgi                      3
 ```
 
-### All countries combined
+## Hvor ofte bruker du Internett? (All countries combined)
 
 ![Hvor ofte bruker du Internett? All countries combined](results/04-internettvaner-all-countries.png)
 
@@ -53,13 +49,13 @@ Flere ganger om dagen             112
 Ukentlig                            3
 ```
 
-### All countries combined
+## Hvordan håndterer du varsler om informasjonskapsler? (All countries combined)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hvordan håndterer du varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/05-01-default-valg-all-countries-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hvordan håndterer du varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (Total #)](results/total/05-02-default-valg-all-countries-with-v-without-impair-num.png)
 
@@ -72,7 +68,7 @@ Ignorere                   3            2
 Tilpasse                  23            7
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hvordan håndterer du varsler om informasjonskapsler?All countries combined, all abilities](results/05-03-default-valg-all-countries-all-abilities.png)
 
@@ -86,13 +82,13 @@ Tilpasse                30
 ```
 
 
-### All countries combined
+## Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (All countries combined)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/06-01-vanskelighetsgrad-generell-all-countries-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (Total #)](results/total/06-02-vanskelighetsgrad-generell-all-countries-with-v-without-impair-num.png)
 
@@ -106,7 +102,7 @@ vanskelighetsgrad-generell
 5 - Veldig vanskelig                           13           10
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?All countries combined, all abilities](results/06-03-vanskelighetsgrad-generell-all-countries-all-abilities.png)
 
@@ -121,13 +117,13 @@ vanskelighetsgrad-generell
 ```
 
 
-### All countries combined
+## Hva synes du generelt om teksten i varsler om informasjonskapsler? (All countries combined)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/07-01-vanskelighetsgrad-tekst-all-countries-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (Total #)](results/total/07-02-vanskelighetsgrad-tekst-all-countries-with-v-without-impair-num.png)
 
@@ -142,7 +138,7 @@ vanskelighetsgrad-tekst
 5 - Veldig vanskelig                           15            7
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?All countries combined, all abilities](results/07-03-vanskelighetsgrad-tekst-all-countries-all-abilities.png)
 
@@ -158,13 +154,13 @@ vanskelighetsgrad-tekst
 ```
 
 
-### All countries combined
+## Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (All countries combined)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/08-01-vanskelighetsgrad-valg-all-countries-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?All countries combined, With vs. Without Impairment (Total #)](results/total/08-02-vanskelighetsgrad-valg-all-countries-with-v-without-impair-num.png)
 
@@ -178,7 +174,7 @@ vanskelighetsgrad-valg
 5 - Veldig vanskelig                           11            8
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?All countries combined, all abilities](results/08-03-vanskelighetsgrad-valg-all-countries-all-abilities.png)
 

@@ -99,7 +99,7 @@ def process_data():
       title = ""
       if "title" in values:
          title = values["title"]
-         res_str += "\n\n## {}".format(title)
+         #res_str += "\n\n## {}".format(title)
          
       for set in values["sets"]:
          
@@ -113,6 +113,8 @@ def process_data():
             res_dict[set] = {}
             res_dict[set]["str"]  = res_str # From here on we are just going to use the res_str from the dictionary 
             res_dict[set]["file"] = os.path.join("RESULTS-{}".format(set).upper()+".md")
+          
+         res_dict[set]["str"] = res_dict[set]["str"] + "\n\n## {}".format(title)
          
          if not set in lookup["file-app"] and not lookup["file-app"][set]:
             appendix = set
@@ -126,7 +128,7 @@ def process_data():
          else:
             tmp_title   = set    
          curr_title    += "\n{}".format(tmp_title)
-         res_dict[set]["str"]  = res_dict[set]["str"] + "\n\n### {}\n".format(tmp_title) # This needs to be changed maybe
+         res_dict[set]["str"]  = res_dict[set]["str"] + " ({})\n".format(tmp_title) # This needs to be changed maybe
          
          ext       = "png"
          fig_size  = ()
@@ -172,7 +174,7 @@ def process_data():
                else:
                   tmp_subset_title = subset_values["title-app"]
                curr_subset_title += ", {}".format(tmp_subset_title)
-               res_dict[set]["str"] = res_dict[set]["str"] + "\n#### Subset {}\n".format(tmp_subset_title) # This needs to be changed maybe
+               res_dict[set]["str"] = res_dict[set]["str"] + "\n### Subset {}\n".format(tmp_subset_title) # This needs to be changed maybe
                
                curr_data_subset    = curr_data_set
                grouped_data_subset = []

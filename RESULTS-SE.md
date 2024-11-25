@@ -1,8 +1,6 @@
 # Results from the survey
 
-## From which country did the answers come in?
-
-### Sweden only
+## From which country did the answers come in? (Sweden only)
 
 ![From which country did the answers come in? Sweden only](results/00-land-sweden-only.png)
 
@@ -22,7 +20,7 @@ United Kingdom     5
 United States      1
 ```
 
-### Sweden only
+## Hvor gammel er du? (Sweden only)
 
 ![Hvor gammel er du? Sweden only](results/sverige/10-alder-sweden-only.png)
 
@@ -34,7 +32,7 @@ alder
 66 og eldre      4
 ```
 
-### Sweden only
+## Er du ...? (Sweden only)
 
 ![Er du ...? Sweden only](results/sverige/20-kjonn-sweden-only.png)
 
@@ -45,7 +43,7 @@ Kvinne     29
 Mann       12
 ```
 
-### Sweden only
+## Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (Sweden only)
 
 ![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? Sweden only](results/sverige/30-funksjonsnedsettelse-sweden-only.png)
 
@@ -57,7 +55,7 @@ Nei                                     27
 Ønsker ikke å oppgi                      2
 ```
 
-### Sweden only
+## Hvor ofte bruker du Internett? (Sweden only)
 
 ![Hvor ofte bruker du Internett? Sweden only](results/sverige/40-internettvaner-sweden-only.png)
 
@@ -68,13 +66,13 @@ Daglig                              4
 Flere ganger om dagen              37
 ```
 
-### Sweden only
+## Hvordan håndterer du varsler om informasjonskapsler? (Sweden only)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/50-01-default-valg-sweden-only-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (Total #)](results/sverige/total/50-02-default-valg-sweden-only-with-v-without-impair-num.png)
 
@@ -87,7 +85,7 @@ Tilpasse                 5.0            2
 Ignorere                 NaN            1
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, all abilities](results/sverige/50-03-default-valg-sweden-only-all-abilities.png)
 
@@ -101,13 +99,13 @@ Tilpasse                 7
 ```
 
 
-### Sweden only
+## Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Sweden only)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/60-01-vanskelighetsgrad-generell-sweden-only-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (Total #)](results/sverige/total/60-02-vanskelighetsgrad-generell-sweden-only-with-v-without-impair-num.png)
 
@@ -121,7 +119,7 @@ vanskelighetsgrad-generell
 5 - Veldig vanskelig                            3          2.0
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, all abilities](results/sverige/60-03-vanskelighetsgrad-generell-sweden-only-all-abilities.png)
 
@@ -136,13 +134,13 @@ vanskelighetsgrad-generell
 ```
 
 
-### Sweden only
+## Hva synes du generelt om teksten i varsler om informasjonskapsler? (Sweden only)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/70-01-vanskelighetsgrad-tekst-sweden-only-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (Total #)](results/sverige/total/70-02-vanskelighetsgrad-tekst-sweden-only-with-v-without-impair-num.png)
 
@@ -157,7 +155,7 @@ vanskelighetsgrad-tekst
 5 - Veldig vanskelig                            2            2
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, all abilities](results/sverige/70-03-vanskelighetsgrad-tekst-sweden-only-all-abilities.png)
 
@@ -173,13 +171,13 @@ vanskelighetsgrad-tekst
 ```
 
 
-### Sweden only
+## Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Sweden only)
 
-#### Subset With vs. Witout Impairment (%)
+### Subset With vs. Witout Impairment (%)
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/80-01-vanskelighetsgrad-valg-sweden-only-with-v-withou-impair-pct.png)
 
-#### Subset With vs. Without Impairment (Total #)
+### Subset With vs. Without Impairment (Total #)
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, With vs. Without Impairment (Total #)](results/sverige/total/80-02-vanskelighetsgrad-valg-sweden-only-with-v-without-impair-num.png)
 
@@ -193,7 +191,7 @@ vanskelighetsgrad-valg
 5 - Veldig vanskelig                            1          4.0
 ```
 
-#### Subset all abilities
+### Subset all abilities
 
 ![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, all abilities](results/sverige/80-03-vanskelighetsgrad-valg-sweden-only-all-abilities.png)
 
