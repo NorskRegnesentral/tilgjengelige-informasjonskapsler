@@ -10,15 +10,15 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=()):
    Returns the results as string.
    """
    
-   colors = "Pastel2"
+   colors = "tab20"
    fig, ax = plt.subplots()
    
    if fig_size:
       fig.set_size_inches(fig_size)   
 
    if kind == "pie":
-      pupsi ='%1.f%%'
-      data.plot(kind=kind,subplots=True,ax=ax,autopct=pupsi, ylabel="", cmap=colors)
+      rounding ='%1.f%%'
+      data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors)
 
    else: 
       if is_percentage:
@@ -36,6 +36,11 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=()):
            
    if title:
       ax.set_title(title)
+   
+   folder = os.path.dirname(save_file)
+   if not os.path.exists(folder):
+      print("Creating folder\"{}\".".format(folder))
+      os.makedirs(folder)
       
    if save_file:
       fig.savefig(save_file)
