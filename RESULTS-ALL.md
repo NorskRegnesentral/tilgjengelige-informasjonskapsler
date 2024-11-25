@@ -51,9 +51,9 @@ Ukentlig                            3
 
 ## 5. Hvordan håndterer du varsler om informasjonskapsler? (All countries combined)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hvordan håndterer du varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/05-01-default-valg-all-countries-with-v-withou-impair-pct.png)
+![Hvordan håndterer du varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (%)](results/05-01-default-valg-all-countries-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -84,9 +84,9 @@ Tilpasse                30
 
 ## 6. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (All countries combined)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/06-01-vanskelighetsgrad-generell-all-countries-with-v-withou-impair-pct.png)
+![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (%)](results/06-01-vanskelighetsgrad-generell-all-countries-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -119,9 +119,9 @@ vanskelighetsgrad-generell
 
 ## 7. Hva synes du generelt om teksten i varsler om informasjonskapsler? (All countries combined)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hva synes du generelt om teksten i varsler om informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/07-01-vanskelighetsgrad-tekst-all-countries-with-v-withou-impair-pct.png)
+![Hva synes du generelt om teksten i varsler om informasjonskapsler?All countries combined, With vs. Without Impairment (%)](results/07-01-vanskelighetsgrad-tekst-all-countries-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -156,9 +156,9 @@ vanskelighetsgrad-tekst
 
 ## 8. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (All countries combined)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?All countries combined, With vs. Witout Impairment (%)](results/08-01-vanskelighetsgrad-valg-all-countries-with-v-withou-impair-pct.png)
+![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?All countries combined, With vs. Without Impairment (%)](results/08-01-vanskelighetsgrad-valg-all-countries-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 

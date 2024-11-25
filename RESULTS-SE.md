@@ -68,9 +68,9 @@ Flere ganger om dagen              37
 
 ## 50. Hvordan håndterer du varsler om informasjonskapsler? (Sweden only)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/50-01-default-valg-sweden-only-with-v-withou-impair-pct.png)
+![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (%)](results/sverige/50-01-default-valg-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -101,9 +101,9 @@ Tilpasse                 7
 
 ## 60. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Sweden only)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/60-01-vanskelighetsgrad-generell-sweden-only-with-v-withou-impair-pct.png)
+![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (%)](results/sverige/60-01-vanskelighetsgrad-generell-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -136,9 +136,9 @@ vanskelighetsgrad-generell
 
 ## 70. Hva synes du generelt om teksten i varsler om informasjonskapsler? (Sweden only)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/70-01-vanskelighetsgrad-tekst-sweden-only-with-v-withou-impair-pct.png)
+![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, With vs. Without Impairment (%)](results/sverige/70-01-vanskelighetsgrad-tekst-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 
@@ -173,9 +173,9 @@ vanskelighetsgrad-tekst
 
 ## 80. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Sweden only)
 
-### Subset With vs. Witout Impairment (%)
+### Subset With vs. Without Impairment (%)
 
-![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, With vs. Witout Impairment (%)](results/sverige/80-01-vanskelighetsgrad-valg-sweden-only-with-v-withou-impair-pct.png)
+![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, With vs. Without Impairment (%)](results/sverige/80-01-vanskelighetsgrad-valg-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset With vs. Without Impairment (Total #)
 

@@ -107,7 +107,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -141,7 +141,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -176,7 +176,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -210,7 +210,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -245,7 +245,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -279,7 +279,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -314,7 +314,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
@@ -348,7 +348,7 @@ tasks = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Witout Impairment (%)",
+               "title-app":      "With vs. Without Impairment (%)",
                "is-percentage":  True
                },
             2: {
