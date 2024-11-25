@@ -147,6 +147,7 @@ vanskelighetsgrad-generell
 ```
                                    without-impair  with-impair
 vanskelighetsgrad-tekst                                       
+-1 - Svarte ikke                                1            1
 1 - Veldig lett                                 3            1
 2 - Ganske lett                                 3            1
 3 - Verken lett/\neller vanskelig              11            3
@@ -161,6 +162,7 @@ vanskelighetsgrad-tekst
 ```
                                    vanskelighetsgrad-tekst
 vanskelighetsgrad-tekst                                   
+-1 - Svarte ikke                                         2
 1 - Veldig lett                                          4
 2 - Ganske lett                                          4
 3 - Verken lett/\neller vanskelig                       15

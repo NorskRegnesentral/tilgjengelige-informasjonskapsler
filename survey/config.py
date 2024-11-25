@@ -376,7 +376,7 @@ tasks = {
    }
 
 vanskelighetsgrad = {
-   -1: "-1 - No answer",
+   -1: "-1 - Svarte ikke",
    1: "1 - Veldig lett",
    2: "2 - Ganske lett",
    3: "3 - Verken lett/\neller vanskelig",

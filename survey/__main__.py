@@ -21,7 +21,7 @@ def prepare_data(data,group_by):
       print("No paramter for grouping the data has been chosen")
       return
 
-   data = data[data[group_by]!=-1] # Remove all nan
+   #data = data[data[group_by]!=-1] # Remove all nan
    
    if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]:
       repl_lut = config.lookup["answers-repl"][group_by]
