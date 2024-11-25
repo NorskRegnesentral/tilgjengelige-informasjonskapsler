@@ -130,7 +130,6 @@ vanskelighetsgrad-generell
 ```
                                    without-impair  with-impair
 vanskelighetsgrad-tekst                                       
--1 - No answer                                  1            1
 1 - Veldig lett                                 9            4
 2 - Ganske lett                                11            2
 3 - Verken lett/\neller vanskelig              41            9
@@ -145,7 +144,6 @@ vanskelighetsgrad-tekst
 ```
                                    vanskelighetsgrad-tekst
 vanskelighetsgrad-tekst                                   
--1 - No answer                                           2
 1 - Veldig lett                                         13
 2 - Ganske lett                                         14
 3 - Verken lett/\neller vanskelig                       51
