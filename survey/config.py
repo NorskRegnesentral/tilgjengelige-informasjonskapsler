@@ -266,7 +266,7 @@ tasks = {
          },
          "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6),
+         "fig_size": (11,6),
          "cmap":  bar_color
       },
    
@@ -300,7 +300,7 @@ tasks = {
          },
          "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
          "kind":     "bar",
-         "fig_size": (10,6),
+         "fig_size": (11,6),
          "target-folder": "sverige",
          "cmap":  bar_color
       },
@@ -394,7 +394,7 @@ lookup = {
    "title-app": {
       "no": "Norway only",
       "se": "Sweden only",
-      "all": "All countries combined"
+      "all": "All countries combined" #wech
       },
    "answers-repl": {
       "default-valg": {
