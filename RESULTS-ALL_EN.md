@@ -32,9 +32,9 @@ Non-Binary      4
 ```
                       funksjonsnedsettelse
 funksjonsnedsettelse                      
-Ja                                      36
-Nei                                    112
-Ønsker ikke å oppgi                      3
+No                                     112
+Prefer not to say                        3
+Yes                                     36
 ```
 
 ## 9. Describe your impairment or condition. It is related to … (All countries combined)
@@ -44,13 +44,13 @@ Nei                                    112
 ```
                                 funksjonsnedsettelse-type-kode
 funksjonsnedsettelse-type-kode                                
-hørsel                                                       3
-kognisjon                                                   14
-mobilitet                                                    6
-motorikk                                                     7
-syn                                                          7
-syn (blind)                                                  7
-ubestemt                                                     1
+cognition                                                   14
+hearing                                                      3
+mobility                                                     6
+motor                                                        7
+unknown                                                      1
+vision                                                       7
+vision (blind)                                               7
 ```
 
 ## 4. How often do you use the internet? (All countries combined)

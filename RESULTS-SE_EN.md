@@ -50,9 +50,9 @@ Male       12
 ```
                       funksjonsnedsettelse
 funksjonsnedsettelse                      
-Ja                                      12
-Nei                                     27
-Ønsker ikke å oppgi                      2
+No                                      27
+Prefer not to say                        2
+Yes                                     12
 ```
 
 ## 40. How often do you use the internet? (Sweden only)

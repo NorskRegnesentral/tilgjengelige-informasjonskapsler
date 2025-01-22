@@ -808,7 +808,7 @@ kjonn_en = {
 bool_en = {
    "Ja": "Yes",
    "Nei": "No",
-   "Onsker ikke å oppgi": "Prefer not to say"
+   "Ønsker ikke å oppgi": "Prefer not to say"
    }
 
 vanskelighetsgrad_en = {
@@ -820,11 +820,10 @@ vanskelighetsgrad_en = {
    5: "5 - Very difficult" 
    }
 
-funksjonsnedsettelser_type_en = {
+funksjonsnedsettelse_type_en = {
    "hørsel": "hearing",
    "kognisjon": "cognition",
    "mobilitet": "mobility",
-   "motor": "motor",
    "motorikk": "motor",
    "syn": "vision",
    "syn (blind)": "vision (blind)",
@@ -852,7 +851,8 @@ lookup_en = {
    "answers-repl": {
       "alder": alder_en,
       "kjonn": kjonn_en,
-      #"funksjonsnedsettelse-type-kode": funksjonsnedsettelser_type_en,
+      "funksjonsnedsettelse": bool_en,
+      "funksjonsnedsettelse-type-kode": funksjonsnedsettelse_type_en,
       "internettvaner": internettvaner_en,
       "default-valg": {
          "Jeg ignorerer dem.": "Ignore",
@@ -860,7 +860,6 @@ lookup_en = {
          "Jeg avviser alle cookies, hvis mulig.": "Reject",
          "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Adjust"
          },
-      #"funksjonsnedsettelse": bool_en,
       "vanskelighetsgrad-generell": vanskelighetsgrad_en,
       "vanskelighetsgrad-tekst": vanskelighetsgrad_en,
       "vanskelighetsgrad-valg": vanskelighetsgrad_en,
