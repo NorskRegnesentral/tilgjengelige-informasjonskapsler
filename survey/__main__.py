@@ -25,7 +25,6 @@ def prepare_data(data,group_by,lookup,sep=""):
    
    if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
       repl_lut = lookup["answers-repl"][group_by]
-      print("hiersimmer")
       
       data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
          

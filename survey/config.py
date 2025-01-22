@@ -792,6 +792,25 @@ lookup_no = {
       }
    }
 
+alder_en = {
+   "19 - 30 år": "19 - 30 years",
+   "31 - 49 år": "31 - 49 years",
+   "50 - 65 år": "50 - 65 years",
+   "66 og eldre": "66 years and older"
+   }
+
+kjonn_en = {
+   "Mann": "Male",
+   "Kvinne": "Female",
+   "Ikke-binær": "Non-Binary"
+   }
+
+bool_en = {
+   "Ja": "Yes",
+   "Nei": "No",
+   "Onsker ikke å oppgi": "Prefer not to say"
+   }
+
 vanskelighetsgrad_en = {
    -1: "-1 - No answer",
    1: "1 - Very easy",
@@ -799,6 +818,23 @@ vanskelighetsgrad_en = {
    3: "3 - Neither easy/\nnor difficult",
    4: "4 - Quite difficutl",
    5: "5 - Very difficult" 
+   }
+
+funksjonsnedsettelser_type_en = {
+   "hørsel": "hearing",
+   "kognisjon": "cognition",
+   "mobilitet": "mobility",
+   "motor": "motor",
+   "motorikk": "motor",
+   "syn": "vision",
+   "syn (blind)": "vision (blind)",
+   "ubestemt": "unknown"
+   }
+
+internettvaner_en = {
+   "Daglig": "Daily",
+   "Flere ganger om dagen": "Multiple times a day",
+   "Ukentlig": "Weekly"
    }
 
 # The data sets are determined programmatically in the main module under key "data_set"
@@ -814,12 +850,17 @@ lookup_en = {
       "all": "All countries combined" #wech
       },
    "answers-repl": {
+      "alder": alder_en,
+      "kjonn": kjonn_en,
+      #"funksjonsnedsettelse-type-kode": funksjonsnedsettelser_type_en,
+      "internettvaner": internettvaner_en,
       "default-valg": {
-         "Jeg ignorerer dem.": "Ignor",
+         "Jeg ignorerer dem.": "Ignore",
          "Jeg godtar alle cookies uten å lese informasjonsteksten.": "Accept",
          "Jeg avviser alle cookies, hvis mulig.": "Reject",
-         "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Adjust",
+         "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Adjust"
          },
+      #"funksjonsnedsettelse": bool_en,
       "vanskelighetsgrad-generell": vanskelighetsgrad_en,
       "vanskelighetsgrad-tekst": vanskelighetsgrad_en,
       "vanskelighetsgrad-valg": vanskelighetsgrad_en,
