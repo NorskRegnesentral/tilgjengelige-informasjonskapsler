@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 import config
 
-def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=""):
+def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap="",text_bckgrd=False):
    """
    Returns the results as string.
    """
@@ -21,7 +21,10 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=
 
    if kind == "pie":
       rounding ='%1.f%%'
-      data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors)
+      if not text_bckgrd:
+         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, legend=False)
+      else:
+         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, legend=False, textprops={'color':"black","backgroundcolor": "w"})
 
    else: 
       if is_percentage:

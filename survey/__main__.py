@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 from visualization import plot_data
 
-def prepare_data(data,group_by):
+def prepare_data(data,group_by,sep=""):
    
    if not group_by:
       print("No paramter for grouping the data has been chosen")
@@ -23,14 +23,22 @@ def prepare_data(data,group_by):
 
    #data = data[data[group_by]!=-1] # Remove all nan
    
-   if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]:
+   if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]: # What is this?
       repl_lut = config.lookup["answers-repl"][group_by]
+      print("hiersimmer")
       
       data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
          
    curr_data = data.groupby(group_by)[group_by].count()
    curr_data = curr_data.to_frame()
    
+   if sep:
+      data[group_by] = data[group_by].str.split(sep)
+      data           = data.explode(group_by)
+   
+   curr_data = data.groupby(group_by)[group_by].count()
+   curr_data = curr_data.to_frame()
+      
    return curr_data, "{}".format(curr_data)
       
 def process_data():
@@ -76,7 +84,6 @@ def process_data():
    
    res_dict = {} # Make one individual result file for each set
    
-   
    for key,values in tasks.items():
       
       """
@@ -95,10 +102,17 @@ def process_data():
          continue
             
       var  = values["var"][0]
+      sep = ""
+      if "data-sep" in values:
+         sep = values["data-sep"]
       kind = values["kind"]
       cmap = ""
       if "cmap" in values:
          cmap = values["cmap"]
+      
+      text_bckgrd = False
+      if "text_bckgrd" in values:
+         text_bckgrd = values["text_bckgrd"]
       
       title = ""
       if "title" in values:
@@ -146,8 +160,8 @@ def process_data():
                target_folder = values["target-folder"]
             save_file = os.path.join("results",lan,target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
-            grouped_data, curr_res = prepare_data(curr_data_set,var)
-            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
+            grouped_data, curr_res = prepare_data(curr_data_set,var,sep)
+            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
             
             rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
             rel_save_file = PurePath(rel_save_file).as_posix()
@@ -184,7 +198,7 @@ def process_data():
                grouped_data_subset = []
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
-                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,sep)
                
                else:
                   multiple_groups = []
@@ -220,7 +234,7 @@ def process_data():
                save_file = os.path.join("results",lan,target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                
                grouped_data_subset = grouped_data_subset#.dropna()
-               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
+               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
                
                rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
                rel_save_file = PurePath(rel_save_file).as_posix()

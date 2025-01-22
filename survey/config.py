@@ -18,7 +18,7 @@ tasks_no = {
          "sets":  ["se"],
          "title": "Fra hvilket land kom svarene inn?",
          "kind":  "pie",
-         "cmap":  "gist_ncar"
+         "cmap":  "Spectral"
       },
    
    # 1. age as pie chart
@@ -63,17 +63,26 @@ tasks_no = {
    3: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["all"], 
-         "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
+         "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
          "cmap":  pie_color
       },
    
+   9: {
+         "var": ["funksjonsnedsettelse-type-kode"],
+         "data-sep": ",",
+         "sets": ["all"],
+         "title": "Beskriv funskjonsnedsettelsen din. Den er relatert til …",
+         "kind": "pie",
+         "cmap": "Spectral",
+         "text_bckgrd": True
+      },
       
    # 3. impairment as pie chart
    30: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["se"], 
-         "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
+         "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
          "target-folder": "sverige",
          "cmap":  pie_color
@@ -433,6 +442,15 @@ tasks_en = {
          "cmap":  pie_color
       },
    
+   9: {
+         "var": ["funksjonsnedsettelse-type-kode"],
+         "data-sep": ",",
+         "sets": ["all"],
+         "title": "Describe your impairment. It is related to …",
+         "kind": "pie",
+         "cmap": "Spectral",
+         "text_bckgrd": True
+      },
       
    # 3. impairment as pie chart
    30: {
