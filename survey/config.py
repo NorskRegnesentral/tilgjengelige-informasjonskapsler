@@ -758,7 +758,7 @@ tasks_en = {
       },
    }
 
-vanskelighetsgrad = {
+vanskelighetsgrad_no = {
    -1: "-1 - Svarte ikke",
    1: "1 - Veldig lett",
    2: "2 - Ganske lett",
@@ -768,17 +768,16 @@ vanskelighetsgrad = {
    }
 
 # The data sets are determined programmatically in the main module under key "data_set"
-lookup = {
+lookup_no = {
    "file-app": {
       "no": "norway-only",
       "se": "sweden-only",
       "all": "all-countries"
       },
    "title-app": {
-      "no": "Norway only",
-      "se": "Sweden only",
+      "no": "Kun Norge",
+      "se": "Kun Sverige",
       "all": "Alle land"
-      #"all": "All countries combined" #wech
       },
    "answers-repl": {
       "default-valg": {
@@ -787,9 +786,43 @@ lookup = {
          "Jeg avviser alle cookies, hvis mulig.": "Avvise",
          "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Tilpasse",
          },
-      "vanskelighetsgrad-generell": vanskelighetsgrad,
-      "vanskelighetsgrad-tekst": vanskelighetsgrad,
-      "vanskelighetsgrad-valg": vanskelighetsgrad,
+      "vanskelighetsgrad-generell": vanskelighetsgrad_no,
+      "vanskelighetsgrad-tekst": vanskelighetsgrad_no,
+      "vanskelighetsgrad-valg": vanskelighetsgrad_no,
+      }
+   }
+
+vanskelighetsgrad_en = {
+   -1: "-1 - No answer",
+   1: "1 - Very easy",
+   2: "2 - Quite easy",
+   3: "3 - Neither easy/\nnor difficult",
+   4: "4 - Quite difficutl",
+   5: "5 - Very difficult" 
+   }
+
+# The data sets are determined programmatically in the main module under key "data_set"
+lookup_en = {
+   "file-app": {
+      "no": "norway-only",
+      "se": "sweden-only",
+      "all": "all-countries"
+      },
+   "title-app": {
+      "no": "Norway only",
+      "se": "Sweden only",
+      "all": "All countries combined" #wech
+      },
+   "answers-repl": {
+      "default-valg": {
+         "Jeg ignorerer dem.": "Ignor",
+         "Jeg godtar alle cookies uten å lese informasjonsteksten.": "Accept",
+         "Jeg avviser alle cookies, hvis mulig.": "Reject",
+         "Jeg leser informasjonsteksten og deretter bestemmer jeg hva jeg skal avvise eller akseptere.": "Adjust",
+         },
+      "vanskelighetsgrad-generell": vanskelighetsgrad_en,
+      "vanskelighetsgrad-tekst": vanskelighetsgrad_en,
+      "vanskelighetsgrad-valg": vanskelighetsgrad_en,
       }
    }
 
@@ -800,4 +833,9 @@ Setting tasks for each language
 tasks = {
    "no": tasks_no,
    "en": tasks_en
+   }
+
+lookup = {
+   "no": lookup_no,
+   "en": lookup_en
    }

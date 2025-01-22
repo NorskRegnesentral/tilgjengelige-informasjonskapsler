@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 from visualization import plot_data
 
-def prepare_data(data,group_by,sep=""):
+def prepare_data(data,group_by,lookup,sep=""):
    
    if not group_by:
       print("No paramter for grouping the data has been chosen")
@@ -23,8 +23,8 @@ def prepare_data(data,group_by,sep=""):
 
    #data = data[data[group_by]!=-1] # Remove all nan
    
-   if "answers-repl" in config.lookup and group_by in config.lookup["answers-repl"]: # What is this?
-      repl_lut = config.lookup["answers-repl"][group_by]
+   if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
+      repl_lut = lookup["answers-repl"][group_by]
       print("hiersimmer")
       
       data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
@@ -61,13 +61,13 @@ def process_data():
    """
    2. Defining tasks for the analysis.
    """
-   lan = "no"
+   lan = "en"
    tasks = config.tasks[lan]
    
    """
    3. Defining basic lookup variables.
    """
-   lookup = config.lookup
+   lookup = config.lookup[lan]
    
    # I think this is the cleanest way but I encourage you to prove me wrong.
    lookup["data_set"] = {
@@ -160,7 +160,7 @@ def process_data():
                target_folder = values["target-folder"]
             save_file = os.path.join("results",lan,target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
-            grouped_data, curr_res = prepare_data(curr_data_set,var,sep)
+            grouped_data, curr_res = prepare_data(curr_data_set,var,lookup,sep)
             plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
             
             rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
@@ -198,7 +198,7 @@ def process_data():
                grouped_data_subset = []
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
-                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,sep)
+                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,sep)
                
                else:
                   multiple_groups = []
@@ -210,7 +210,7 @@ def process_data():
                      else:
                         print("Unknown operator chosen for the subset: {}".format(operator[0])) 
                         continue
-                     curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var)
+                     curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,sep)
                      #curr_grouped_data_subset = curr_grouped_data_subset.to_frame()
                      
                      if len(operator)>2:
