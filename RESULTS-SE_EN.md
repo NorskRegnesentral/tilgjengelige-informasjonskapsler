@@ -79,10 +79,10 @@ Flere ganger om dagen              37
 ```
               without-impair  with-impair
 default-valg                             
-Avvise                  17.0            5
-Godta                    7.0            4
-Tilpasse                 5.0            2
-Ignorere                 NaN            1
+Accept                   7.0            4
+Adjust                   5.0            2
+Reject                  17.0            5
+Ignor                    NaN            1
 ```
 
 ### Subset all abilities
@@ -92,10 +92,10 @@ Ignorere                 NaN            1
 ```
               default-valg
 default-valg              
-Avvise                  22
-Godta                   11
-Ignorere                 1
-Tilpasse                 7
+Accept                  11
+Adjust                   7
+Ignor                    1
+Reject                  22
 ```
 
 
@@ -110,13 +110,13 @@ Tilpasse                 7
 ![How do you generally find managing cookie notifications?Sweden only, With vs. Without Impairment (Total #)](results/en/sverige/total/60-02-vanskelighetsgrad-generell-sweden-only-with-v-without-impair-num.png)
 
 ```
-                                   without-impair  with-impair
-vanskelighetsgrad-generell                                    
-1 - Veldig lett                                 1          NaN
-2 - Ganske lett                                 4          2.0
-3 - Verken lett/\neller vanskelig              12          4.0
-4 - Ganske vanskelig                            9          4.0
-5 - Veldig vanskelig                            3          2.0
+                                  without-impair  with-impair
+vanskelighetsgrad-generell                                   
+1 - Very easy                                  1          NaN
+2 - Quite easy                                 4          2.0
+3 - Neither easy/\nnor difficult              12          4.0
+4 - Quite difficutl                            9          4.0
+5 - Very difficult                             3          2.0
 ```
 
 ### Subset all abilities
@@ -124,13 +124,13 @@ vanskelighetsgrad-generell
 ![How do you generally find managing cookie notifications?Sweden only, all abilities](results/en/sverige/60-03-vanskelighetsgrad-generell-sweden-only-all-abilities.png)
 
 ```
-                                   vanskelighetsgrad-generell
-vanskelighetsgrad-generell                                   
-1 - Veldig lett                                             1
-2 - Ganske lett                                             6
-3 - Verken lett/\neller vanskelig                          16
-4 - Ganske vanskelig                                       13
-5 - Veldig vanskelig                                        5
+                                  vanskelighetsgrad-generell
+vanskelighetsgrad-generell                                  
+1 - Very easy                                              1
+2 - Quite easy                                             6
+3 - Neither easy/\nnor difficult                          16
+4 - Quite difficutl                                       13
+5 - Very difficult                                         5
 ```
 
 
@@ -145,14 +145,14 @@ vanskelighetsgrad-generell
 ![What do you generally think about the text in cookie notifications?Sweden only, With vs. Without Impairment (Total #)](results/en/sverige/total/70-02-vanskelighetsgrad-tekst-sweden-only-with-v-without-impair-num.png)
 
 ```
-                                   without-impair  with-impair
-vanskelighetsgrad-tekst                                       
--1 - Svarte ikke                                1            1
-1 - Veldig lett                                 3            1
-2 - Ganske lett                                 3            1
-3 - Verken lett/\neller vanskelig              12            3
-4 - Ganske vanskelig                            7            4
-5 - Veldig vanskelig                            3            2
+                                  without-impair  with-impair
+vanskelighetsgrad-tekst                                      
+-1 - No answer                                 1            1
+1 - Very easy                                  3            1
+2 - Quite easy                                 3            1
+3 - Neither easy/\nnor difficult              12            3
+4 - Quite difficutl                            7            4
+5 - Very difficult                             3            2
 ```
 
 ### Subset all abilities
@@ -160,14 +160,14 @@ vanskelighetsgrad-tekst
 ![What do you generally think about the text in cookie notifications?Sweden only, all abilities](results/en/sverige/70-03-vanskelighetsgrad-tekst-sweden-only-all-abilities.png)
 
 ```
-                                   vanskelighetsgrad-tekst
-vanskelighetsgrad-tekst                                   
--1 - Svarte ikke                                         2
-1 - Veldig lett                                          4
-2 - Ganske lett                                          4
-3 - Verken lett/\neller vanskelig                       15
-4 - Ganske vanskelig                                    11
-5 - Veldig vanskelig                                     5
+                                  vanskelighetsgrad-tekst
+vanskelighetsgrad-tekst                                  
+-1 - No answer                                          2
+1 - Very easy                                           4
+2 - Quite easy                                          4
+3 - Neither easy/\nnor difficult                       15
+4 - Quite difficutl                                    11
+5 - Very difficult                                      5
 ```
 
 
@@ -182,13 +182,13 @@ vanskelighetsgrad-tekst
 ![Is it generally easy or difficult to make choices for cookies?Sweden only, With vs. Without Impairment (Total #)](results/en/sverige/total/80-02-vanskelighetsgrad-valg-sweden-only-with-v-without-impair-num.png)
 
 ```
-                                   without-impair  with-impair
-vanskelighetsgrad-valg                                        
-1 - Veldig lett                                 4          1.0
-2 - Ganske lett                                 3          NaN
-3 - Verken lett/\neller vanskelig               9          2.0
-4 - Ganske vanskelig                           11          5.0
-5 - Veldig vanskelig                            2          4.0
+                                  without-impair  with-impair
+vanskelighetsgrad-valg                                       
+1 - Very easy                                  4          1.0
+2 - Quite easy                                 3          NaN
+3 - Neither easy/\nnor difficult               9          2.0
+4 - Quite difficutl                           11          5.0
+5 - Very difficult                             2          4.0
 ```
 
 ### Subset all abilities
@@ -196,11 +196,11 @@ vanskelighetsgrad-valg
 ![Is it generally easy or difficult to make choices for cookies?Sweden only, all abilities](results/en/sverige/80-03-vanskelighetsgrad-valg-sweden-only-all-abilities.png)
 
 ```
-                                   vanskelighetsgrad-valg
-vanskelighetsgrad-valg                                   
-1 - Veldig lett                                         5
-2 - Ganske lett                                         3
-3 - Verken lett/\neller vanskelig                      11
-4 - Ganske vanskelig                                   16
-5 - Veldig vanskelig                                    6
+                                  vanskelighetsgrad-valg
+vanskelighetsgrad-valg                                  
+1 - Very easy                                          5
+2 - Quite easy                                         3
+3 - Neither easy/\nnor difficult                      11
+4 - Quite difficutl                                   16
+5 - Very difficult                                     6
 ```
