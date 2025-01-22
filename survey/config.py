@@ -792,3 +792,12 @@ lookup = {
       "vanskelighetsgrad-valg": vanskelighetsgrad,
       }
    }
+
+"""
+Setting tasks for each language
+"""
+
+tasks = {
+   "no": tasks_no,
+   "en": tasks_en
+   }

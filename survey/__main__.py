@@ -61,8 +61,8 @@ def process_data():
    """
    2. Defining tasks for the analysis.
    """
-   tasks = config.tasks_no
    lan = "no"
+   tasks = config.tasks[lan]
    
    """
    3. Defining basic lookup variables.
