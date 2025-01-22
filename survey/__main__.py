@@ -22,18 +22,15 @@ def prepare_data(data,group_by,lookup,sep=""):
       return
 
    #data = data[data[group_by]!=-1] # Remove all nan
-   
-   if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
-      repl_lut = lookup["answers-repl"][group_by]
-      
-      data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
-         
-   curr_data = data.groupby(group_by)[group_by].count()
-   curr_data = curr_data.to_frame()
-   
    if sep:
       data[group_by] = data[group_by].str.split(sep)
       data           = data.explode(group_by)
+
+   if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
+      repl_lut = lookup["answers-repl"][group_by]
+      
+      data = data.replace(repl_lut)
+      #data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
    
    curr_data = data.groupby(group_by)[group_by].count()
    curr_data = curr_data.to_frame()
