@@ -13,7 +13,7 @@ Denmark            1
 Finland            1
 Germany            1
 Ireland            1
-Neirway            1
+Norway             1
 South Africa       1
 Sweden            27
 United Kingdom     5
@@ -25,11 +25,11 @@ United States      1
 ![How old are you? Sweden only](results/en/sverige/10-alder-sweden-only.png)
 
 ```
-             alder
-alder             
-31 - 49 år      26
-50 - 65 år      11
-66 og eldre      4
+                    alder
+alder                    
+31 - 49 years          26
+50 - 65 years          11
+66 years and older      4
 ```
 
 ## 20. Are you ...? (Sweden only)
@@ -39,8 +39,8 @@ alder
 ```
         kjonn
 kjonn        
-Kvinne     29
-Mann       12
+Female     29
+Male       12
 ```
 
 ## 30. Do you have an impairment or other condition that affects how you use the internet? (Sweden only)
@@ -60,10 +60,10 @@ Nei                                     27
 ![How often do you use the internet? Sweden only](results/en/sverige/40-internettvaner-sweden-only.png)
 
 ```
-                       internettvaner
-internettvaner                       
-Daglig                              4
-Flere ganger om dagen              37
+                      internettvaner
+internettvaner                      
+Daily                              4
+Multiple times a day              37
 ```
 
 ## 50. How do you generally handle cookie notifications? (Sweden only)
@@ -82,7 +82,7 @@ default-valg
 Accept                   7.0            4
 Adjust                   5.0            2
 Reject                  17.0            5
-Ignor                    NaN            1
+Ignore                   NaN            1
 ```
 
 ### Subset all abilities
@@ -94,7 +94,7 @@ Ignor                    NaN            1
 default-valg              
 Accept                  11
 Adjust                   7
-Ignor                    1
+Ignore                   1
 Reject                  22
 ```
 

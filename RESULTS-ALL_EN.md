@@ -5,12 +5,12 @@
 ![How old are you? All countries combined](results/en/01-alder-all-countries.png)
 
 ```
-             alder
-alder             
-19 - 30 år       5
-31 - 49 år      38
-50 - 65 år      35
-66 og eldre     73
+                    alder
+alder                    
+19 - 30 years           5
+31 - 49 years          38
+50 - 65 years          35
+66 years and older     73
 ```
 
 ## 2. Are you ...? (All countries combined)
@@ -20,9 +20,9 @@ alder
 ```
             kjonn
 kjonn            
-Ikke-binær      4
-Kvinne         88
-Mann           59
+Female         88
+Male           59
+Non-Binary      4
 ```
 
 ## 3. Do you have an impairment or other condition that affects how you use the internet? (All countries combined)
@@ -59,11 +59,11 @@ ubestemt                                                     1
 ![How often do you use the internet? All countries combined](results/en/04-internettvaner-all-countries.png)
 
 ```
-                       internettvaner
-internettvaner                       
-Daglig                             36
-Flere ganger om dagen             112
-Ukentlig                            3
+                      internettvaner
+internettvaner                      
+Daily                             36
+Multiple times a day             112
+Weekly                             3
 ```
 
 ## 5. How do you generally handle cookie notifications? (All countries combined)
@@ -81,7 +81,7 @@ Ukentlig                            3
 default-valg                             
 Accept                    32            9
 Adjust                    23            7
-Ignor                      3            2
+Ignore                     3            2
 Reject                    54           18
 ```
 
@@ -94,7 +94,7 @@ Reject                    54           18
 default-valg              
 Accept                  42
 Adjust                  30
-Ignor                    5
+Ignore                   5
 Reject                  74
 ```
 
