@@ -25,9 +25,9 @@ Male           59
 Non-Binary      4
 ```
 
-## 3. Do you have an impairment or other condition that affects how you use the internet? (All countries combined)
+## 3. Do you have an impairment or other condition? (All countries combined)
 
-![Do you have an impairment or other condition that affects how you use the internet? All countries combined](results/en/03-funksjonsnedsettelse-all-countries.png)
+![Do you have an impairment or other condition? All countries combined](results/en/03-funksjonsnedsettelse-all-countries.png)
 
 ```
                       funksjonsnedsettelse
@@ -37,9 +37,9 @@ Nei                                    112
 Ønsker ikke å oppgi                      3
 ```
 
-## 9. Describe your impairment. It is related to … (All countries combined)
+## 9. Describe your impairment or condition. It is related to … (All countries combined)
 
-![Describe your impairment. It is related to … All countries combined](results/en/09-funksjonsnedsettelse-type-kode-all-countries.png)
+![Describe your impairment or condition. It is related to … All countries combined](results/en/09-funksjonsnedsettelse-type-kode-all-countries.png)
 
 ```
                                 funksjonsnedsettelse-type-kode

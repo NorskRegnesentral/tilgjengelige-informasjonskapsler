@@ -437,7 +437,7 @@ tasks_en = {
    3: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["all"], 
-         "title": "Do you have an impairment or other condition that affects how you use the internet?",
+         "title": "Do you have an impairment or other condition?",
          "kind":  "pie",
          "cmap":  pie_color
       },
@@ -446,7 +446,7 @@ tasks_en = {
          "var": ["funksjonsnedsettelse-type-kode"],
          "data-sep": ",",
          "sets": ["all"],
-         "title": "Describe your impairment. It is related to …",
+         "title": "Describe your impairment or condition. It is related to …",
          "kind": "pie",
          "cmap": "Spectral",
          "text_bckgrd": True
