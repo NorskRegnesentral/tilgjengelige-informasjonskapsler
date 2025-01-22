@@ -7,8 +7,10 @@ Created on 21. nov. 2024
 import os
 import pandas as pd
 
-pie_color = "cool"
-bar_color = "Paired"
+import seaborn as sns 
+
+pie_color = sns.diverging_palette(350, 225, s=75, l=65, as_cmap=True)#cool"#sns.color_palette("viridis", as_cmap=True)#"cool"
+bar_color = sns.diverging_palette(350, 225, s=75, l=65, as_cmap=True)#"cool"#"Paired"
 
 tasks_no = {
       
@@ -27,7 +29,8 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Hvor gammel er du?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
 
    # 10. age as pie chart
@@ -46,7 +49,8 @@ tasks_no = {
          "sets":  ["all"],
          "title": "Er du ...?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
     # 20. gender as pie chart
@@ -56,7 +60,8 @@ tasks_no = {
          "title": "Er du ...?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 3. impairment as pie chart
@@ -65,7 +70,8 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    9: {
@@ -85,7 +91,8 @@ tasks_no = {
          "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -94,7 +101,8 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -104,7 +112,8 @@ tasks_no = {
          "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 5. default choices as bar chart separated by impairment (with, without, combined)
@@ -392,7 +401,7 @@ tasks_en = {
          "sets":  ["se"],
          "title": "From which country did the answers come in?",
          "kind":  "pie",
-         "cmap":  "gist_ncar"
+         "cmap":  "Spectral"
       },
    
    # 1. age as pie chart
@@ -401,7 +410,8 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "How old are you?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
 
    # 10. age as pie chart
@@ -411,7 +421,8 @@ tasks_en = {
          "title":         "How old are you?",
          "kind":          "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 2. gender as pie chart
@@ -420,7 +431,8 @@ tasks_en = {
          "sets":  ["all"],
          "title": "Are you ...?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
     # 20. gender as pie chart
@@ -430,7 +442,8 @@ tasks_en = {
          "title": "Are you ...?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 3. impairment as pie chart
@@ -439,7 +452,8 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "Do you have an impairment or other condition?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    9: {
@@ -459,7 +473,8 @@ tasks_en = {
          "title": "Do you have an impairment or other condition that affects how you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -468,7 +483,8 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "How often do you use the internet?",
          "kind":  "pie",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 4. internet habits as pie chart separated by impairment (with, without, combined)
@@ -478,7 +494,8 @@ tasks_en = {
          "title": "How often do you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color,
+         "text_bckgrd": True
       },
    
    # 5. default choices as bar chart separated by impairment (with, without, combined)
