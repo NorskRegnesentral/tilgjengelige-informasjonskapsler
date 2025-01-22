@@ -16,7 +16,7 @@ tasks_no = {
    0: { 
          "var":   ["land"],
          "sets":  ["se"],
-         "title": "From which country did the answers come in?",
+         "title": "Fra hvilket land kom svarene inn?",
          "kind":  "pie",
          "cmap":  "gist_ncar"
       },
@@ -107,14 +107,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -122,7 +122,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -141,14 +141,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -156,7 +156,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -176,14 +176,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -191,7 +191,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -210,14 +210,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -225,7 +225,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -245,14 +245,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -260,7 +260,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -279,14 +279,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -294,7 +294,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -314,14 +314,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("equal to","Nei","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -329,7 +329,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -348,14 +348,14 @@ tasks_no = {
                "var":            "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":       "with-v-withou-impair-pct",
-               "title-app":      "With vs. Without Impairment (%)",
+               "title-app":      "Med vs. Uten funksjonsnedsettelse (%)",
                "is-percentage":  True
                },
             2: {
                "var":           "funksjonsnedsettelse",
                "operators":     [("not equal to","Ja","without-impair"),("equal to","Ja","with-impair")],
                "file-app":      "with-v-without-impair-num",
-               "title-app":     "With vs. Without Impairment (Total #)",
+               "title-app":     "Med vs. Uten funksjonsnedsettelse (Total #)",
                "is-percentage": False,
                "target-folder": "total"
                },
@@ -363,7 +363,7 @@ tasks_no = {
                "var":           "funksjonsnedsettelse",
                "operators":     [],
                "file-app":      "all-abilities",
-               "title-app":     "all abilities",
+               "title-app":     "uansett funksjonsevne",
                "is-percentage": True
                },
          },
@@ -390,7 +390,7 @@ tasks_en = {
    1: {
          "var":   ["alder"],
          "sets":  ["all"], 
-         "title": "Hvor gammel er du?",
+         "title": "How old are you?",
          "kind":  "pie",
          "cmap":  pie_color
       },
@@ -399,7 +399,7 @@ tasks_en = {
    10: {
          "var":           ["alder"],
          "sets":          ["se"], #wech: no
-         "title":         "Hvor gammel er du?",
+         "title":         "How old are you?",
          "kind":          "pie",
          "target-folder": "sverige",
          "cmap":  pie_color
@@ -409,7 +409,7 @@ tasks_en = {
    2: {
          "var": ["kjonn"],
          "sets":  ["all"],
-         "title": "Er du ...?",
+         "title": "Are you ...?",
          "kind":  "pie",
          "cmap":  pie_color
       },
@@ -418,7 +418,7 @@ tasks_en = {
    20: {
          "var": ["kjonn"],
          "sets":  ["se"],
-         "title": "Er du ...?",
+         "title": "Are you ...?",
          "kind":  "pie",
          "target-folder": "sverige",
          "cmap":  pie_color
@@ -428,7 +428,7 @@ tasks_en = {
    3: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["all"], 
-         "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
+         "title": "Do you have an impairment or other condition that affects how you use the internet?",
          "kind":  "pie",
          "cmap":  pie_color
       },
@@ -438,7 +438,7 @@ tasks_en = {
    30: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["se"], 
-         "title": "Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet?",
+         "title": "Do you have an impairment or other condition that affects how you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
          "cmap":  pie_color
@@ -448,7 +448,7 @@ tasks_en = {
    4: {
          "var": ["internettvaner"],
          "sets":  ["all"], 
-         "title": "Hvor ofte bruker du Internett?",
+         "title": "How often do you use the internet?",
          "kind":  "pie",
          "cmap":  pie_color
       },
@@ -457,7 +457,7 @@ tasks_en = {
    40: {
          "var": ["internettvaner"],
          "sets":  ["se"], 
-         "title": "Hvor ofte bruker du Internett?",
+         "title": "How often do you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
          "cmap":  pie_color
@@ -491,7 +491,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hvordan håndterer du varsler om informasjonskapsler?",
+         "title":    "How do you generally handle cookie notifications?",
          "kind":     "bar",
          "fig_size": (10,6),
          "cmap":  bar_color
@@ -525,7 +525,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hvordan håndterer du varsler om informasjonskapsler?",
+         "title":    "How do you generally handle cookie notifications?",
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
@@ -560,7 +560,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
+         "title":    "How do you generally find managing cookie notifications?",
          "kind":     "bar",
          "fig_size": (10,6),
          "cmap":  bar_color
@@ -594,7 +594,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?",
+         "title":    "How do you generally find managing cookie notifications?",
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
@@ -629,7 +629,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
+         "title":    "What do you generally think about the text in cookie notifications?",
          "kind":     "bar",
          "fig_size": (11,6),
          "cmap":  bar_color
@@ -663,7 +663,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Hva synes du generelt om teksten i varsler om informasjonskapsler?",
+         "title":    "What do you generally think about the text in cookie notifications?",
          "kind":     "bar",
          "fig_size": (11,6),
          "target-folder": "sverige",
@@ -698,7 +698,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
+         "title":    "Is it generally easy or difficult to make choices for cookies?",
          "kind":     "bar",
          "fig_size": (10,6),
          "cmap":  bar_color
@@ -732,7 +732,7 @@ tasks_en = {
                "is-percentage": True
                },
          },
-         "title":    "Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?",
+         "title":    "Is it generally easy or difficult to make choices for cookies?",
          "kind":     "bar",
          "fig_size": (10,6),
          "target-folder": "sverige",
@@ -759,7 +759,8 @@ lookup = {
    "title-app": {
       "no": "Norway only",
       "se": "Sweden only",
-      "all": "All countries combined" #wech
+      "all": "Alle land"
+      #"all": "All countries combined" #wech
       },
    "answers-repl": {
       "default-valg": {

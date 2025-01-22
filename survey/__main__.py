@@ -54,6 +54,7 @@ def process_data():
    2. Defining tasks for the analysis.
    """
    tasks = config.tasks_no
+   lan = "no"
    
    """
    3. Defining basic lookup variables.
@@ -75,7 +76,6 @@ def process_data():
    
    res_dict = {} # Make one individual result file for each set
    
-   lan = "no"
    
    for key,values in tasks.items():
       
