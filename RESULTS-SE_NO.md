@@ -13,7 +13,7 @@ Denmark            1
 Finland            1
 Germany            1
 Ireland            1
-Neirway            1
+Norway             1
 South Africa       1
 Sweden            27
 United Kingdom     5
