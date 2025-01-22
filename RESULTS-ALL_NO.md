@@ -25,9 +25,9 @@ Kvinne         88
 Mann           59
 ```
 
-## 3. Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (Alle land)
+## 3. Har du en funksjonsnedsettelse eller annen tilstand? (Alle land)
 
-![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? Alle land](results/no/03-funksjonsnedsettelse-all-countries.png)
+![Har du en funksjonsnedsettelse eller annen tilstand? Alle land](results/no/03-funksjonsnedsettelse-all-countries.png)
 
 ```
                       funksjonsnedsettelse
@@ -35,6 +35,23 @@ funksjonsnedsettelse
 Ja                                      36
 Nei                                    112
 Ønsker ikke å oppgi                      3
+```
+
+## 9. Beskriv funskjonsnedsettelsen din. Den er relatert til … (Alle land)
+
+![Beskriv funskjonsnedsettelsen din. Den er relatert til … Alle land](results/no/09-funksjonsnedsettelse-type-kode-all-countries.png)
+
+```
+                                funksjonsnedsettelse-type-kode
+funksjonsnedsettelse-type-kode                                
+hørsel                                                       3
+kognisjon                                                   14
+mobilitet                                                    5
+motor                                                        1
+motorikk                                                     7
+syn                                                          7
+syn (blind)                                                  7
+ubestemt                                                     1
 ```
 
 ## 4. Hvor ofte bruker du Internett? (Alle land)

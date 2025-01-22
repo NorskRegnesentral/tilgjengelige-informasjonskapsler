@@ -43,9 +43,9 @@ Kvinne     29
 Mann       12
 ```
 
-## 30. Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? (Sweden only)
+## 30. Har du en funksjonsnedsettelse eller annen tilstand? (Sweden only)
 
-![Har du en funksjonsnedsettelse eller annen tilstand som påvirker hvordan du bruker nettet? Sweden only](results/no/sverige/30-funksjonsnedsettelse-sweden-only.png)
+![Har du en funksjonsnedsettelse eller annen tilstand? Sweden only](results/no/sverige/30-funksjonsnedsettelse-sweden-only.png)
 
 ```
                       funksjonsnedsettelse
