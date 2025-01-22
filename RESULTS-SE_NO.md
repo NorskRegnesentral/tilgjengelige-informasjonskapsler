@@ -1,8 +1,8 @@
 # Results from the survey
 
-## 0. Fra hvilket land kom svarene inn? (Sweden only)
+## 0. Fra hvilket land kom svarene inn? (Kun Sverige)
 
-![Fra hvilket land kom svarene inn? Sweden only](results/no/00-land-sweden-only.png)
+![Fra hvilket land kom svarene inn? Kun Sverige](results/no/00-land-sweden-only.png)
 
 ```
                 land
@@ -20,9 +20,9 @@ United Kingdom     5
 United States      1
 ```
 
-## 10. Hvor gammel er du? (Sweden only)
+## 10. Hvor gammel er du? (Kun Sverige)
 
-![Hvor gammel er du? Sweden only](results/no/sverige/10-alder-sweden-only.png)
+![Hvor gammel er du? Kun Sverige](results/no/sverige/10-alder-sweden-only.png)
 
 ```
              alder
@@ -32,9 +32,9 @@ alder
 66 og eldre      4
 ```
 
-## 20. Er du ...? (Sweden only)
+## 20. Er du ...? (Kun Sverige)
 
-![Er du ...? Sweden only](results/no/sverige/20-kjonn-sweden-only.png)
+![Er du ...? Kun Sverige](results/no/sverige/20-kjonn-sweden-only.png)
 
 ```
         kjonn
@@ -43,9 +43,9 @@ Kvinne     29
 Mann       12
 ```
 
-## 30. Har du en funksjonsnedsettelse eller annen tilstand? (Sweden only)
+## 30. Har du en funksjonsnedsettelse eller annen tilstand? (Kun Sverige)
 
-![Har du en funksjonsnedsettelse eller annen tilstand? Sweden only](results/no/sverige/30-funksjonsnedsettelse-sweden-only.png)
+![Har du en funksjonsnedsettelse eller annen tilstand? Kun Sverige](results/no/sverige/30-funksjonsnedsettelse-sweden-only.png)
 
 ```
                       funksjonsnedsettelse
@@ -55,9 +55,9 @@ Nei                                     27
 Ønsker ikke å oppgi                      2
 ```
 
-## 40. Hvor ofte bruker du Internett? (Sweden only)
+## 40. Hvor ofte bruker du Internett? (Kun Sverige)
 
-![Hvor ofte bruker du Internett? Sweden only](results/no/sverige/40-internettvaner-sweden-only.png)
+![Hvor ofte bruker du Internett? Kun Sverige](results/no/sverige/40-internettvaner-sweden-only.png)
 
 ```
                        internettvaner
@@ -66,15 +66,15 @@ Daglig                              4
 Flere ganger om dagen              37
 ```
 
-## 50. Hvordan håndterer du varsler om informasjonskapsler? (Sweden only)
+## 50. Hvordan håndterer du varsler om informasjonskapsler? (Kun Sverige)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (%)
 
-![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/50-01-default-valg-sweden-only-with-v-withou-impair-pct.png)
+![Hvordan håndterer du varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/50-01-default-valg-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (Total #)
 
-![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/50-02-default-valg-sweden-only-with-v-without-impair-num.png)
+![Hvordan håndterer du varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/50-02-default-valg-sweden-only-with-v-without-impair-num.png)
 
 ```
               without-impair  with-impair
@@ -87,7 +87,7 @@ Ignorere                 NaN            1
 
 ### Subset uansett funksjonsevne
 
-![Hvordan håndterer du varsler om informasjonskapsler?Sweden only, uansett funksjonsevne](results/no/sverige/50-03-default-valg-sweden-only-all-abilities.png)
+![Hvordan håndterer du varsler om informasjonskapsler?Kun Sverige, uansett funksjonsevne](results/no/sverige/50-03-default-valg-sweden-only-all-abilities.png)
 
 ```
               default-valg
@@ -99,15 +99,15 @@ Tilpasse                 7
 ```
 
 
-## 60. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Sweden only)
+## 60. Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler? (Kun Sverige)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (%)
 
-![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/60-01-vanskelighetsgrad-generell-sweden-only-with-v-withou-impair-pct.png)
+![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/60-01-vanskelighetsgrad-generell-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (Total #)
 
-![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/60-02-vanskelighetsgrad-generell-sweden-only-with-v-without-impair-num.png)
+![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/60-02-vanskelighetsgrad-generell-sweden-only-with-v-without-impair-num.png)
 
 ```
                                    without-impair  with-impair
@@ -121,7 +121,7 @@ vanskelighetsgrad-generell
 
 ### Subset uansett funksjonsevne
 
-![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Sweden only, uansett funksjonsevne](results/no/sverige/60-03-vanskelighetsgrad-generell-sweden-only-all-abilities.png)
+![Hvordan opplever du generelt sett å håndtere varsler om informasjonskapsler?Kun Sverige, uansett funksjonsevne](results/no/sverige/60-03-vanskelighetsgrad-generell-sweden-only-all-abilities.png)
 
 ```
                                    vanskelighetsgrad-generell
@@ -134,15 +134,15 @@ vanskelighetsgrad-generell
 ```
 
 
-## 70. Hva synes du generelt om teksten i varsler om informasjonskapsler? (Sweden only)
+## 70. Hva synes du generelt om teksten i varsler om informasjonskapsler? (Kun Sverige)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (%)
 
-![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/70-01-vanskelighetsgrad-tekst-sweden-only-with-v-withou-impair-pct.png)
+![Hva synes du generelt om teksten i varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/70-01-vanskelighetsgrad-tekst-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (Total #)
 
-![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/70-02-vanskelighetsgrad-tekst-sweden-only-with-v-without-impair-num.png)
+![Hva synes du generelt om teksten i varsler om informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/70-02-vanskelighetsgrad-tekst-sweden-only-with-v-without-impair-num.png)
 
 ```
                                    without-impair  with-impair
@@ -157,7 +157,7 @@ vanskelighetsgrad-tekst
 
 ### Subset uansett funksjonsevne
 
-![Hva synes du generelt om teksten i varsler om informasjonskapsler?Sweden only, uansett funksjonsevne](results/no/sverige/70-03-vanskelighetsgrad-tekst-sweden-only-all-abilities.png)
+![Hva synes du generelt om teksten i varsler om informasjonskapsler?Kun Sverige, uansett funksjonsevne](results/no/sverige/70-03-vanskelighetsgrad-tekst-sweden-only-all-abilities.png)
 
 ```
                                    vanskelighetsgrad-tekst
@@ -171,15 +171,15 @@ vanskelighetsgrad-tekst
 ```
 
 
-## 80. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Sweden only)
+## 80. Er det generelt lett eller vanskelig å ta valg for informasjonskapsler? (Kun Sverige)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (%)
 
-![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/80-01-vanskelighetsgrad-valg-sweden-only-with-v-withou-impair-pct.png)
+![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (%)](results/no/sverige/80-01-vanskelighetsgrad-valg-sweden-only-with-v-withou-impair-pct.png)
 
 ### Subset Med vs. Uten funksjonsnedsettelse (Total #)
 
-![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/80-02-vanskelighetsgrad-valg-sweden-only-with-v-without-impair-num.png)
+![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Kun Sverige, Med vs. Uten funksjonsnedsettelse (Total #)](results/no/sverige/total/80-02-vanskelighetsgrad-valg-sweden-only-with-v-without-impair-num.png)
 
 ```
                                    without-impair  with-impair
@@ -193,7 +193,7 @@ vanskelighetsgrad-valg
 
 ### Subset uansett funksjonsevne
 
-![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Sweden only, uansett funksjonsevne](results/no/sverige/80-03-vanskelighetsgrad-valg-sweden-only-all-abilities.png)
+![Er det generelt lett eller vanskelig å ta valg for informasjonskapsler?Kun Sverige, uansett funksjonsevne](results/no/sverige/80-03-vanskelighetsgrad-valg-sweden-only-all-abilities.png)
 
 ```
                                    vanskelighetsgrad-valg
