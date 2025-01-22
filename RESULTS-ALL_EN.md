@@ -46,8 +46,7 @@ Nei                                    112
 funksjonsnedsettelse-type-kode                                
 hørsel                                                       3
 kognisjon                                                   14
-mobilitet                                                    5
-motor                                                        1
+mobilitet                                                    6
 motorikk                                                     7
 syn                                                          7
 syn (blind)                                                  7
