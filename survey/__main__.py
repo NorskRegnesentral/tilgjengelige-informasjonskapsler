@@ -53,7 +53,7 @@ def process_data():
    """
    2. Defining tasks for the analysis.
    """
-   tasks = config.tasks
+   tasks = config.tasks_no
    
    """
    3. Defining basic lookup variables.
@@ -74,6 +74,8 @@ def process_data():
    res_str = "# Results from the survey" # All results will be stored in a text file, next to th graphs.
    
    res_dict = {} # Make one individual result file for each set
+   
+   lan = "no"
    
    for key,values in tasks.items():
       
@@ -114,7 +116,7 @@ def process_data():
          if set not in res_dict:
             res_dict[set] = {}
             res_dict[set]["str"]  = res_str # From here on we are just going to use the res_str from the dictionary 
-            res_dict[set]["file"] = os.path.join("RESULTS-{}".format(set).upper()+".md")
+            res_dict[set]["file"] = os.path.join("RESULTS-{}_{}".format(set,lan).upper()+".md")
           
          res_dict[set]["str"] = res_dict[set]["str"] + "\n\n## {}. {}".format(key,title)
          
@@ -142,7 +144,7 @@ def process_data():
             target_folder = ""
             if "target-folder" in values:
                target_folder = values["target-folder"]
-            save_file = os.path.join("results",target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
+            save_file = os.path.join("results",lan,target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
             grouped_data, curr_res = prepare_data(curr_data_set,var)
             plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
@@ -215,7 +217,7 @@ def process_data():
                sub_target_folder = ""
                if "target-folder" in subset_values:
                   sub_target_folder = subset_values["target-folder"]
-               save_file = os.path.join("results",target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
+               save_file = os.path.join("results",lan,target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                
                grouped_data_subset = grouped_data_subset#.dropna()
                plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap) # Here, the actually analysis is triggered
