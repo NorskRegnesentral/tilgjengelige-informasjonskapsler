@@ -9,7 +9,8 @@ import pandas as pd
 
 import seaborn as sns 
 
-pie_color = sns.diverging_palette(350, 225, s=75, l=65, as_cmap=True)#cool"#sns.color_palette("viridis", as_cmap=True)#"cool"
+pie_color_bright = sns.diverging_palette(350, 225, s=75, l=65, as_cmap=True)#cool"#sns.color_palette("viridis", as_cmap=True)#"cool"
+pie_color_dark = sns.diverging_palette(350, 225, s=75, l=65, center="dark",as_cmap=True)
 bar_color = sns.diverging_palette(350, 225, s=75, l=65, as_cmap=True)#"cool"#"Paired"
 
 tasks_no = {
@@ -29,18 +30,18 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Hvor gammel er du?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_bright,
          "text_bckgrd": True
       },
 
    # 10. age as pie chart
-   10: {
+   11: {
          "var":           ["alder"],
          "sets":          ["se"], #wech: no
          "title":         "Hvor gammel er du?",
          "kind":          "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color
+         "cmap":  pie_color_bright
       },
    
    # 2. gender as pie chart
@@ -49,7 +50,7 @@ tasks_no = {
          "sets":  ["all"],
          "title": "Er du ...?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -60,7 +61,7 @@ tasks_no = {
          "title": "Er du ...?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -70,11 +71,11 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
-   9: {
+   30: {
          "var": ["funksjonsnedsettelse-type-kode"],
          "data-sep": ",",
          "sets": ["all"],
@@ -85,13 +86,13 @@ tasks_no = {
       },
       
    # 3. impairment as pie chart
-   30: {
+   31: {
          "var": ["funksjonsnedsettelse"],
          "sets":  ["se"], 
          "title": "Har du en funksjonsnedsettelse eller annen tilstand?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -101,7 +102,7 @@ tasks_no = {
          "sets":  ["all"], 
          "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -112,7 +113,7 @@ tasks_no = {
          "title": "Hvor ofte bruker du Internett?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -391,6 +392,18 @@ tasks_no = {
          "target-folder": "sverige",
          "cmap":  bar_color
       },
+   9: { 
+         "var":   ["eksempler-paa-utfordringer"],
+         "sets":  ["all"],
+         "title": "Kan du gi et eksempel på noe du synes er vanskelig med cookies?",
+         "kind":  "text"
+      },
+   10: { 
+         "var":   ["forbedringsforslag"],
+         "sets":  ["all"],
+         "title": "Har du en idé om hvordan cookie-bannere kan gjøres enklere å forstå og administrere?",
+         "kind":  "text"
+      },
    }
 
 tasks_en = {
@@ -410,7 +423,7 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "How old are you?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_bright,
          "text_bckgrd": True
       },
 
@@ -421,7 +434,7 @@ tasks_en = {
          "title":         "How old are you?",
          "kind":          "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_bright,
          "text_bckgrd": True
       },
    
@@ -431,7 +444,7 @@ tasks_en = {
          "sets":  ["all"],
          "title": "Are you ...?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -442,7 +455,7 @@ tasks_en = {
          "title": "Are you ...?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -452,7 +465,7 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "Do you have an impairment or other condition?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -473,7 +486,7 @@ tasks_en = {
          "title": "Do you have an impairment or other condition that affects how you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -483,7 +496,7 @@ tasks_en = {
          "sets":  ["all"], 
          "title": "How often do you use the internet?",
          "kind":  "pie",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    
@@ -494,7 +507,7 @@ tasks_en = {
          "title": "How often do you use the internet?",
          "kind":  "pie",
          "target-folder": "sverige",
-         "cmap":  pie_color,
+         "cmap":  pie_color_dark,
          "text_bckgrd": True
       },
    

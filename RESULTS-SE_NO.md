@@ -20,9 +20,9 @@ United Kingdom     5
 United States      1
 ```
 
-## 10. Hvor gammel er du? (Kun Sverige)
+## 11. Hvor gammel er du? (Kun Sverige)
 
-![Hvor gammel er du? Kun Sverige](results/no/sverige/10-alder-sweden-only.png)
+![Hvor gammel er du? Kun Sverige](results/no/sverige/11-alder-sweden-only.png)
 
 ```
              alder
@@ -43,9 +43,9 @@ Kvinne     29
 Mann       12
 ```
 
-## 30. Har du en funksjonsnedsettelse eller annen tilstand? (Kun Sverige)
+## 31. Har du en funksjonsnedsettelse eller annen tilstand? (Kun Sverige)
 
-![Har du en funksjonsnedsettelse eller annen tilstand? Kun Sverige](results/no/sverige/30-funksjonsnedsettelse-sweden-only.png)
+![Har du en funksjonsnedsettelse eller annen tilstand? Kun Sverige](results/no/sverige/31-funksjonsnedsettelse-sweden-only.png)
 
 ```
                       funksjonsnedsettelse
