@@ -5,6 +5,9 @@
 * [NO](#NO)
    * [Generelt](#generelt)
    * [Resultater fra spørreundersøkelsen](#resultater-fra-spørreundersøkelsen)
+* [EN](#EN)
+  * [General](#general)
+  * [Results from the survey](#results-from-the-survey)
 
 ## NO
 
@@ -28,3 +31,24 @@ Resultater fra spørreundersøkelsen er delt opp i:
 OBS: Det er en forskjell i hvordan brukere med og uten funksjonsnedsettelser er bestemt:
 * I dataene fra Sverige alene, grupper etter funksjonsnedsettelse er definert som personer _som svarte_ ja og personer _som ikke svarte_ ja til det relevante spørsmålet om funksjonsnedsettelse. Personer som ikke ønsket å dele er inkludert med personer uten funksjonsnedsettelse.
 * I de kombinerte dataene, grupper etter funksjonsnedsettelse er definert som personer _som svarte ja_ og personer _som svarte nei_ til det relevante spørsmålet om funksjonsnedsettelse. Personer som ikke ønsket å dele er ekskludert fra resultatene.
+
+## EN
+
+### General
+
+How do cookies and consent declarations impact digital access for people with disabilities? How can developers design solutions that ensure digital inclusion for everyone, regardless of ability?
+
+We want to raise awareness of how cookies and consent declarations impact people with disabilities. By examining the accessibility of specific elements across websites and understanding how lack of access affects users, our goal is to promote the importance of accessibility in both public and private digital services. By enhancing knowledge among decision-makers, web developers, and individuals who rely on digital aids, we aim for this project to lead to increased digital inclusion for everyone, regardless of ability.
+
+More about the project can be found [here](https://nr.no/en/projects/accessible-cookies/).
+
+### Results from the survey
+
+Results from the survey are divided into:
+* [results from Norway and Sweden](RESULTS-ALL_EN.md), including the combined results from Norway and Sweden.
+* [results from Sweden](RESULTS-SE_EN.md). This file was created to quality assure that the analysis is correctly implemented by comparing from the results from the Stiftelsen Funka.
+
+
+NOTE: There is a difference in how users with and without disabilities are determined:
+In the data from Sweden alone, groups by disability are defined as people who answered yes and people who did not answer yes to the relevant disability question. People who did not want to share are included with people without disabilities.
+In the combined data, groups by disability are defined as people who answered yes and people who answered no to the relevant disability question. People who did not want to share are excluded from the results.
