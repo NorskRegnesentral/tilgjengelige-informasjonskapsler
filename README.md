@@ -2,6 +2,10 @@
 
 ## Oversikt
 
+* [NO](#NO)
+   * [Generelt](#generelt)
+   * [Resultater fra spørreundersøkelsen](#resultater-fra-spørreundersøkelsen)
+
 ## NO
 
 ### Generelt
