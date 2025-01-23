@@ -15,28 +15,35 @@ import matplotlib.pyplot as plt
 
 from visualization import plot_data
 
-def prepare_data(data,group_by,lookup,sep=""):
+def prepare_data(data,group_by,lookup,kind,sep=""):
    
    if not group_by:
       print("No paramter for grouping the data has been chosen")
       return
 
-   #data = data[data[group_by]!=-1] # Remove all nan
-   if sep:
-      data[group_by] = data[group_by].str.split(sep)
-      data           = data.explode(group_by)
-
-   if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
-      repl_lut = lookup["answers-repl"][group_by]
-      
-      data = data.replace(repl_lut)
-      #data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
+   if kind == "text":
+      curr_data = data[group_by].dropna().to_list()
+      curr_str = "\n".join(["* {}".format(i.replace("\n","").strip()) for i in curr_data])
    
-   curr_data = data.groupby(group_by)[group_by].count()
-   curr_data = curr_data.to_frame()
+   else:
+      #data = data[data[group_by]!=-1] # Remove all nan
+      if sep:
+         data[group_by] = data[group_by].str.split(sep)
+         data           = data.explode(group_by)
       
-   return curr_data, "{}".format(curr_data)
+      if "answers-repl" in lookup and group_by in lookup["answers-repl"]: # What is this?
+         repl_lut = lookup["answers-repl"][group_by]
+         
+         data = data.replace(repl_lut)
+         #data[group_by] = list(map(lambda x: repl_lut[x], data[group_by]))
       
+      curr_data = data.groupby(group_by)[group_by].count()
+      curr_data = curr_data.to_frame()
+      
+      curr_str = "{}".format(curr_data)
+      
+   return curr_data, curr_str
+   
 def process_data():
    
    data_file = os.path.join("data","2024-10-08_Svar-til-sporreundersokelsen-om-universell-utforming-av-cookies.csv")
@@ -57,7 +64,7 @@ def process_data():
    """
    2. Defining tasks for the analysis.
    """
-   lan = "en"
+   lan = "no"
    tasks = config.tasks[lan]
    
    """
@@ -150,22 +157,27 @@ def process_data():
             fig_size = values["fig_size"]
          is_percentage       = False
          curr_res  = "" 
+         
          if  not "subsets" in values or not values["subsets"]:   
             target_folder = ""
             if "target-folder" in values:
                target_folder = values["target-folder"]
             save_file = os.path.join("results",lan,target_folder,"{:02d}-{}-{}.{}".format(key,var,appendix,ext))
 
-            grouped_data, curr_res = prepare_data(curr_data_set,var,lookup,sep)
-            plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
+            grouped_data, curr_res = prepare_data(curr_data_set,var,lookup,kind,sep)
             
-            rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
-            rel_save_file = PurePath(rel_save_file).as_posix()
+            if  not kind == "text":
+               plot_data(grouped_data,kind,curr_title,save_file=save_file,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
             
-            res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n\n".format(curr_title.replace('\n',' '),rel_save_file)
-            
-            if not is_percentage:
-               res_dict[set]["str"] = res_dict[set]["str"] + "```\n{}\n```".format(curr_res)
+               rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
+               rel_save_file = PurePath(rel_save_file).as_posix()
+               
+               res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n\n".format(curr_title.replace('\n',' '),rel_save_file)
+               
+               if not is_percentage:
+                  res_dict[set]["str"] = res_dict[set]["str"] + "```\n{}\n```".format(curr_res)
+            else:
+               res_dict[set]["str"] = res_dict[set]["str"] + "\nAntall svar: {}\n\n{}".format(len(grouped_data),curr_res)
          else:
             
             for subset_key,subset_values in values["subsets"].items(): # values["subsets"] is supposed a dict
@@ -194,7 +206,7 @@ def process_data():
                grouped_data_subset = []
                if not "operators" in subset_values or not subset_values["operators"]:
                   print("No operator and/or value has been chosen for the subset. Using the whole data set.")
-                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,sep)
+                  grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,kind,sep)
                
                else:
                   multiple_groups = []
@@ -206,7 +218,7 @@ def process_data():
                      else:
                         print("Unknown operator chosen for the subset: {}".format(operator[0])) 
                         continue
-                     curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,sep)
+                     curr_grouped_data_subset, curr_res = prepare_data(curr_data_subset,var,lookup,kind,sep)
                      #curr_grouped_data_subset = curr_grouped_data_subset.to_frame()
                      
                      if len(operator)>2:
@@ -230,15 +242,16 @@ def process_data():
                save_file = os.path.join("results",lan,target_folder,sub_target_folder,"{:02d}-{:02d}-{}-{}.{}".format(key,subset_key,var,subset_appendix,ext))
                
                grouped_data_subset = grouped_data_subset#.dropna()
-               plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
+               if not kind == "text":
+                  plot_data(grouped_data_subset,kind,curr_subset_title,save_file=save_file,is_percentage=is_percentage,fig_size=fig_size,cmap=cmap,text_bckgrd=text_bckgrd) # Here, the actually analysis is triggered
                
-               rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
-               rel_save_file = PurePath(rel_save_file).as_posix()
+                  rel_save_file = os.path.relpath(save_file,os.path.dirname(res_dict[set]["file"]))
+                  rel_save_file = PurePath(rel_save_file).as_posix()
                
-               res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n".format(curr_subset_title.replace('\n',''),rel_save_file)
+                  res_dict[set]["str"] = res_dict[set]["str"] + "\n![{}]({})\n".format(curr_subset_title.replace('\n',''),rel_save_file)
                
-               if not is_percentage:
-                  res_dict[set]["str"] = res_dict[set]["str"] + "\n```\n{}\n```\n".format(curr_res)
+                  if not is_percentage:
+                     res_dict[set]["str"] = res_dict[set]["str"] + "\n```\n{}\n```\n".format(curr_res)
    
    """
    5. Writing the results to a text file.
