@@ -22,9 +22,9 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=
    if kind == "pie":
       rounding ='%1.f%%'
       if not text_bckgrd:
-         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, legend=False)
+         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, startangle=90, legend=False, shadow=True)
       else:
-         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, legend=False, textprops={'color':"black","backgroundcolor": "w"})
+         data.plot(kind=kind,subplots=True,ax=ax,autopct=rounding, ylabel="", cmap=colors, startangle=90, legend=False, shadow=True,textprops={'color':"black","backgroundcolor": "w"})
 
    else: 
       if is_percentage:
