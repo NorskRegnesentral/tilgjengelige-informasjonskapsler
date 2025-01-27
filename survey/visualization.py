@@ -49,7 +49,7 @@ def plot_data(data,kind,title,save_file="",is_percentage=False,fig_size=(),cmap=
       os.makedirs(folder)
       
    if save_file:
-      fig.savefig(save_file)
+      fig.savefig(save_file,bbox_inches='tight')
       plt.close(fig)
       print("Image saved under {}".format(save_file))
    
