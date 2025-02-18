@@ -2,5 +2,9 @@
    "FILES": "file names",
    "TITLES": "image titles",
    "GLOSSARY": "glossary",
-   "README": "README"
+   "README": "README",
+   "RESULTS-ALL_EN": "All Results (EN)",
+   "RESULTS-ALL_NO": "All Results (NO)",
+   "RESULTS-SE_EN": "All Results (EN)",
+   "RESULTS-SE_NO": "All Results (NO)"
 }
